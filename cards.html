@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card Tracker</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --red: #ef4444;
+      --yellow: #f59e0b;
+      --green: #10b981;
+      --blue: #3b82f6;
+      --bg: white;
+      --text: black;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1e1e1e;
+        --text: #f5f5f5;
+      }
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 1rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      width: 100px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.1);
+    }
+    .X { background: var(--red); }
+    .N { background: var(--yellow); color: black; }
+    .O { background: var(--green); }
+    .Q { background: var(--blue); }
+
+    .card-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .large-display {
+      font-size: 4rem;
+      margin-top: 2rem;
+      min-height: 5rem;
+    }
+    .history {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      opacity: 0.7;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    .history-item {
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      color: white;
+    }
+    .hidden { display: none; }
+    .group {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="group">
+    <button onclick="createGroup()">Create New Group</button>
+    <div id="groupLinks"></div>
+  </div>
+
+  <div id="cardContainer" class="hidden">
+    <div class="card-row">
+      <div class="card X" onclick="sendCard('X')">X</div>
+      <div class="card N" onclick="sendCard('N')">N</div>
+      <div class="card O" onclick="sendCard('O')">O</div>
+      <div class="card Q" onclick="sendCard('?')">?</div>
+    </div>
+  </div>
+
+  <div id="gmDisplay" class="large-display"></div>
+  <div id="history" class="history"></div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const groupId = urlParams.get("group");
+    const gmMode = urlParams.get("gm") === "1";
+
+    const groupLinks = document.getElementById("groupLinks");
+    const cardContainer = document.getElementById("cardContainer");
+    const gmDisplay = document.getElementById("gmDisplay");
+    const historyDiv = document.getElementById("history");
+
+    function createGroup() {
+      const id = Math.random().toString(36).substring(2, 10);
+      const gmUrl = `${location.origin}${location.pathname}?group=${id}&gm=1`;
+      const playerUrl = `${location.origin}${location.pathname}?group=${id}`;
+
+      groupLinks.innerHTML = `
+        <p><strong>GM Link:</strong> <a href="${gmUrl}" target="_blank">${gmUrl}</a></p>
+        <p><strong>Player Link:</strong> <a href="${playerUrl}" target="_blank">${playerUrl}</a></p>
+      `;
+    }
+
+    if (groupId) {
+      const channel = new BroadcastChannel(`group-${groupId}`);
+
+      if (gmMode) {
+        channel.onmessage = (e) => {
+          const symbol = e.data;
+          gmDisplay.innerText = symbol;
+
+          const historyItem = document.createElement("div");
+          historyItem.className = `history-item ${symbol}`;
+          historyItem.innerText = symbol;
+          historyItem.style.background = getColor(symbol);
+          historyDiv.prepend(historyItem);
+
+          setTimeout(() => {
+            if (gmDisplay.innerText === symbol) gmDisplay.innerText = "";
+          }, 10000);
+        };
+      } else {
+        cardContainer.classList.remove("hidden");
+      }
+
+      window.sendCard = (symbol) => {
+        channel.postMessage(symbol);
+      };
+
+      function getColor(symbol) {
+        switch (symbol) {
+          case 'X': return getComputedStyle(document.documentElement).getPropertyValue('--red');
+          case 'N': return getComputedStyle(document.documentElement).getPropertyValue('--yellow');
+          case 'O': return getComputedStyle(document.documentElement).getPropertyValue('--green');
+          case '?': return getComputedStyle(document.documentElement).getPropertyValue('--blue');
+          default: return 'gray';
+        }
+      }
+    }
+  </script>
+</body>
+</html>
