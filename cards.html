@@ -123,7 +123,7 @@
 
   <div id="gmDisplay" class="large-display"></div>
   <div id="history" class="history"></div>
-  <audio id="ping" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+  
 
 
   <script>
@@ -138,6 +138,7 @@
     const historyDiv = document.getElementById("history");
     const ping = document.getElementById("ping");
     const undoButton = document.getElementById("undoButton");
+    const audio = new Audio('https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg');
 
     let lastSent = null;
     let undoTimeout = null;
@@ -181,7 +182,7 @@
 
           gmDisplay.innerText = symbol;
           gmDisplay.classList.add("animate");
-          if (pingEnabled) ping.play();
+          audio.play();
 
 
           appendToHistory(symbol, timestamp);
@@ -242,14 +243,6 @@
         }
       }
     }
-
-    let pingEnabled = false;
-    document.addEventListener('click', () => {
-      if (!pingEnabled) {
-        document.getElementById("ping").play().catch(() => {});
-      pingEnabled = true;
-      }
-    }, { once: true });
 
   </script>
 </body>
