@@ -99,6 +99,15 @@
     .group {
       margin-bottom: 2rem;
     }
+    .copy-icon {
+      cursor: pointer;
+      margin-left: 5px;
+      font-size: 0.9em;
+      color: #555;
+    }
+    .copy-icon:hover {
+      color: #000;
+    }
   </style>
 </head>
 <body>
@@ -143,14 +152,26 @@
     let lastSent = null;
     let undoTimeout = null;
 
+    function copyLink(iconElement) {
+      // Find the preceding <a> tag in the same container
+      const link = iconElement.previousElementSibling;
+      if (link && link.href) {
+        navigator.clipboard.writeText(link.href).then(() => {
+          alert("URL copied: " + link.href);
+        }).catch(err => {
+          console.error("Copy failed", err);
+        });
+      }
+    }
+
     function createGroup() {
       const id = Math.random().toString(36).substring(2, 10);
       const gmUrl = `${location.origin}${location.pathname}?group=${id}&gm=1`;
       const playerUrl = `${location.origin}${location.pathname}?group=${id}`;
 
       groupLinks.innerHTML = `
-        <p><strong>GM Link:</strong> <a href="${gmUrl}" target="_blank">${gmUrl}</a></p>
-        <p><strong>Player Link:</strong> <a href="${playerUrl}" target="_blank">${playerUrl}</a></p>
+        <p><strong>GM Link:</strong> <a href="${gmUrl}" target="_blank" class="copy-link">${gmUrl}</a>  <span class="copy-icon" onclick="copyLink(this)">📋</span></p>
+        <p><strong>Player Link:</strong> <a href="${playerUrl}" target="_blank" class="copy-link">${playerUrl}</a>  <span class="copy-icon" onclick="copyLink(this)">📋</span></p>
       `;
     }
 
