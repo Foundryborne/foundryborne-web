@@ -181,7 +181,8 @@
 
           gmDisplay.innerText = symbol;
           gmDisplay.classList.add("animate");
-          ping.play();
+          if (pingEnabled) ping.play();
+
 
           appendToHistory(symbol, timestamp);
           saveHistory(symbol, timestamp);
@@ -241,6 +242,15 @@
         }
       }
     }
+
+    let pingEnabled = false;
+    document.addEventListener('click', () => {
+      if (!pingEnabled) {
+        document.getElementById("ping").play().catch(() => {});
+      pingEnabled = true;
+      }
+    }, { once: true });
+
   </script>
 </body>
 </html>
