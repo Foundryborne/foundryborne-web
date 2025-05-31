@@ -153,11 +153,19 @@
     let undoTimeout = null;
 
     function copyLink(iconElement) {
-      // Find the preceding <a> tag in the same container
       const link = iconElement.previousElementSibling;
       if (link && link.href) {
         navigator.clipboard.writeText(link.href).then(() => {
-          console.log("URL copied: " + link.href);
+          // Save original content (e.g. the icon)
+          const original = iconElement.innerHTML;
+
+          // Set to checkmark
+          iconElement.innerHTML = '✅';
+
+          // Revert after 1.5 seconds
+          setTimeout(() => {
+            iconElement.innerHTML = original;
+          }, 1500);
         }).catch(err => {
           console.error("Copy failed", err);
         });
