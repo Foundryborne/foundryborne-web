@@ -157,7 +157,7 @@
       const link = iconElement.previousElementSibling;
       if (link && link.href) {
         navigator.clipboard.writeText(link.href).then(() => {
-          alert("URL copied: " + link.href);
+          console.log("URL copied: " + link.href);
         }).catch(err => {
           console.error("Copy failed", err);
         });
