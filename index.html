@@ -1,68 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Foundryborne - Daggerheart FoundryVTT System</title>
-  <link rel="stylesheet" href="assets/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-</head>
-<body>
-<header>
-  <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
-    <div style="display: flex; align-items: center; gap: 1rem;">
-      <img src="assets/foundryborne.png" alt="Daggerheart System Logo" />
-      <h1>Foundryborne - a Daggerheart System for FoundryVTT</h1>
-    </div>
-    <nav>
-    <div class="buttons">
-      <a href="index.html">Home</a>
-      <a href="https://foundryvtt.com/packages/daggerheart">Install</a>
-      <a href="https://github.com/Foundryborne/daggerheart">GitHub</a>
-      <a href="https://discord.gg/HnUt2AtwbD">Join the Discord</a>
-      <a href="faq.html">FAQ</a>
-      <!-- <a href="#screenshots">Screenshots</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundryborne - Daggerheart FoundryVTT System</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      function openLightbox(imgElement) {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        lightboxImg.src = imgElement.src;
+        lightbox.style.display = "flex";
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById("lightbox");
+        lightbox.style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          flex-wrap: wrap;
+        "
+      >
+        <div style="display: flex; align-items: center; gap: 1rem">
+          <img src="assets/foundryborne.png" alt="Daggerheart System Logo" />
+          <h1>Foundryborne - a Daggerheart System for FoundryVTT</h1>
+        </div>
+        <nav>
+          <div class="buttons">
+            <a href="index.html">Home</a>
+            <a href="https://foundryvtt.com/packages/daggerheart">Install</a>
+            <a href="https://github.com/Foundryborne/daggerheart">GitHub</a>
+            <a href="https://discord.gg/HnUt2AtwbD">Join the Discord</a>
+            <a href="faq.html">FAQ</a>
+            <!-- <a href="#screenshots">Screenshots</a>
       <a href="#video">Watch Overview</a> -->
-    </div>
-    </nav>
-  </div>
-</header>
-
-
-  <div class="container">
-    <section class="description">
-      <p>
-        Welcome to the unofficial, community made <strong>Daggerheart</strong> system for <strong>FoundryVTT</strong>.<br />This system is designed to capture the full flavor of the 2d12 Hope & Fear dice mechanics, character builds, and collaborative storytelling magic.
-      </p>
-    </section>
-
-
-    <section class="section" id="screenshots">
-      <h2>Screenshot Gallery (Work in Progress!)</h2>
-      <div class="gallery">
-        <img src="assets/screenshot1.png" alt="Screenshot 1" />
-        <img src="assets/screenshot2.png" alt="Screenshot 2" />
-        <img src="assets/screenshot3.png" alt="Screenshot 3" />
-        <img src="assets/screenshot4.png" alt="Screenshot 4" />
+          </div>
+        </nav>
       </div>
-    </section>
-    
-    <!--<section class="section" id="video">
+    </header>
+
+    <div class="container">
+      <section class="description">
+        <p>
+          Welcome to the unofficial, community made
+          <strong>Daggerheart</strong> system for
+          <strong>FoundryVTT</strong>.<br />This system is designed to capture
+          the full flavor of the 2d12 Hope & Fear dice mechanics, character
+          builds, and collaborative storytelling magic.
+        </p>
+      </section>
+
+      <section class="section" id="screenshots">
+        <h2>Screenshot Gallery (Work in Progress)</h2>
+        <div class="gallery">
+          <img
+            src="assets/screenshot1.png"
+            alt="Screenshot 1"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="assets/screenshot2.png"
+            alt="Screenshot 2"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="assets/screenshot3.png"
+            alt="Screenshot 3"
+            onclick="openLightbox(this)"
+          />
+          <img
+            src="assets/screenshot4.png"
+            alt="Screenshot 4"
+            onclick="openLightbox(this)"
+          />
+          <!-- Add more images here -->
+        </div>
+
+        <!-- Lightbox overlay -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+          <img id="lightbox-img" src="" alt="Enlarged screenshot" />
+        </div>
+      </section>
+
+      <!--<section class="section" id="video">
       <h2>System Overview Video</h2>
       <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yqxF4jEcGNc?si=5hbroE00E2cV9WNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section> -->
 
-    <section class="section" id="learn-more">
-      <h2>About the System</h2>
-      <p>
-        The system includes complete character creation using card choices, Hope and Fear dice mechanics, team tags, group checks, and unique features tailored for the Daggerheart experience.
-      </p>
-      <p>
-        This site will grow with new features, documentation, and updates. Bookmark us and check back soon!
-      </p>
-    </section>
-  </div>
-</body>
+      <section class="section" id="learn-more">
+        <h2>About the System</h2>
+        <p>
+          The system includes complete character creation using card choices,
+          Hope and Fear dice mechanics, team tags, group checks, and unique
+          features tailored for the Daggerheart experience.
+        </p>
+        <p>
+          This site will grow with new features, documentation, and updates.
+          Bookmark us and check back soon!
+        </p>
+      </section>
+    </div>
+  </body>
 </html>

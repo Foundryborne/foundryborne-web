@@ -30,7 +30,16 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  border-image: linear-gradient(147deg, #382D7A 0%, #36337F 12%, #324590 30%, #2C63AB 50%, #2878BE 61%, #81CDC3 100%) 1;
+  border-image: linear-gradient(
+      147deg,
+      #382d7a 0%,
+      #36337f 12%,
+      #324590 30%,
+      #2c63ab 50%,
+      #2878be 61%,
+      #81cdc3 100%
+    )
+    1;
   border-bottom: 4px solid;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -77,8 +86,15 @@ header h1 {
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   transition: background 0.2s ease-in-out;
-  background: linear-gradient(147deg, #382D7A 0%, #36337F 12%, #324590 30%, #2C63AB 50%, #2878BE 61%, #81CDC3 100%);
-
+  background: linear-gradient(
+    147deg,
+    #382d7a 0%,
+    #36337f 12%,
+    #324590 30%,
+    #2c63ab 50%,
+    #2878be 61%,
+    #81cdc3 100%
+  );
 }
 
 .buttons a:hover {
@@ -101,12 +117,21 @@ header h1 {
   object-fit: cover;
 }
 
-iframe {
-  width: 100%;
-  max-width: 720px;
-  height: 405px;
-  border: none;
-  border-radius: 12px;
-  margin-top: 1rem;
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
 }
 
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
