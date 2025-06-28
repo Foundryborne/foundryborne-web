@@ -98,7 +98,6 @@ header img {
   width: 48px;
   height: 48px;
   object-fit: contain;
-  border-radius: 12px;
 }
 
 header.big img {
@@ -171,7 +170,7 @@ nav a {
   background: #26225d;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   transition: var(--transition);
 }
 
@@ -208,7 +207,7 @@ section {
 
 .gallery img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   object-fit: cover;
 }
 
@@ -226,7 +225,7 @@ section {
 .lightbox img {
   max-width: 90vw;
   max-height: 90vh;
-  border-radius: 12px;
+  border-radius: 0.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
 }
@@ -271,4 +270,28 @@ span.special {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 0.5rem;
+  width: 120px;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  margin-left: -86px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
