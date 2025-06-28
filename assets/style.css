@@ -1,7 +1,7 @@
 :root {
   --bg: #17123b;
   --text: 245,245,245;
-  --accent: #372d7a;
+  --accent: #81cdc3;
   --card-bg: #1e194d;
   --gradient: linear-gradient(
       147deg,
@@ -15,7 +15,6 @@
   --transition: all 0.2s ease;
 }
 
-html,
 body {
   height: 100%;
   margin: 0;
@@ -34,6 +33,7 @@ main.content {
 
 body {
   margin: 0;
+  margin-top:6rem;
   background: var(--bg);
   color: rgb(var(--text));
   line-height: 1.6;
@@ -43,7 +43,6 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
   transition: var(--transition)
 }
 
@@ -75,13 +74,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   border-image: var(--gradient) 1;
   border-bottom: 4px solid;
-  position: sticky;
+  position:fixed;
   top: 0;
+  left: 0;
+  width: calc(100% - 4rem);
   z-index: 1000;
   --transition: all 0.2s ease;
+  transition: var(--transition);
+}
+
+header.big {
+  padding: 1rem 2rem;
 }
 
 header.notransition {
@@ -100,10 +106,13 @@ header.big img {
   height:64px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 1000;
+}
+
 header h1 {
   margin: 0;
   font-size: 1.2rem;
-  font-weight: 1000;
   line-height:1;
   transition: var(--transition);
 }
@@ -123,6 +132,16 @@ header.big h1 span {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 790px) {
+  header h1 {
+    font-size: 0;
+  }
+  header h1 span {
+    font-size: 0;
+  }
+  
+}
+
 header .branding {
   display:flex;
   align-items: center;
@@ -133,10 +152,6 @@ header .branding {
   max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
-}
-
-.description {
-  margin-bottom: 2rem;
 }
 
 nav {
@@ -181,8 +196,8 @@ nav a.special:hover {
   background-position: 0% 100%;
 }
 
-.section {
-  margin-top: 2rem;
+section {
+  margin-top: 4rem;
 }
 
 .gallery {
@@ -238,12 +253,22 @@ nav a.special:hover {
 
 summary {
   font-size: 1.4em;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  cursor:pointer;
 }
 
-.faq-link {
-  color: inherit;
-  text-decoration: none;
-}
-.faq-link:hover {
+summary:hover {
   text-decoration: underline;
+}
+
+span.special {
+  background-color: var(--accent);
+  background-image: var(--gradient);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
