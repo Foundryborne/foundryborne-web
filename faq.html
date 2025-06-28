@@ -11,6 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+    <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el && el.tagName.toLowerCase() === 'details') {
+        el.open = true;
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+</script>
   </head>
   <body>
     <header>
@@ -45,7 +57,15 @@
         <h2>Frequently Asked Questions</h2>
 
         <div class="faq">
-          <details>
+          <details id="install-button">
+            <summary>
+              <strong>The Install button is currently not working!</strong>
+            </summary>
+            <p>
+              The system is not 100% done yet, but it will be released very soon. Please check the Discord server for an official announcement, at which point the link will be working.
+            </p>
+          </details>
+          <details id="contributing">
             <summary><strong>(How) Can I contribute?</strong></summary>
             <p>
               You can find a link to the repository in the menu on this website.
@@ -53,7 +73,7 @@
             </p>
           </details>
 
-          <details>
+          <details id="contrib-no-dev">
             <summary>
               <strong>I'm not a developer — can I still contribute?</strong>
             </summary>
@@ -64,7 +84,7 @@
               announcements channel).
             </p>
           </details>
-          <details>
+          <details id="contrib-artist">
             <summary>
               <strong>I am an artist and would love to contribute!</strong>
             </summary>
@@ -72,7 +92,7 @@
               Please get in touch with us using the <code>#contact-us</code> channel on our Discord server.
             </p>
           </details>
-          <details>
+          <details id="contrib-data-entry">
             <summary>
               <strong>Can I help with data entry?</strong>
             </summary>
@@ -80,14 +100,14 @@
               We currently do not need any help with data entry. However, that could change in the future, in which case we would announce it on our Discord server.
             </p>
           </details>
-          <details>
+          <details id="release-date">
             <summary>
               <strong>When will the system be available?</strong>
             </summary>
             <p>Very, very soon.</p>
           </details>
 
-          <details>
+          <details id="preview-testing">
             <summary>
               <strong>Is there a preview? Can I help with testing?</strong>
             </summary>
@@ -100,7 +120,7 @@
             </p>
           </details>
 
-          <details>
+          <details id="license">
             <summary>
               <strong>Is this legal?</strong>
             </summary>
@@ -110,7 +130,7 @@
             </p>
           </details>
 
-          <details>
+          <details id="translations">
             <summary>
               <strong>What about translations?</strong>
             </summary>
@@ -120,7 +140,7 @@
               announced translations we want to wait for their release first.
             </p>
           </details>
-          <details>
+          <details id="foundry-version">
             <summary>
               <strong
                 >Which FoundryVTT version will I need for this system?</strong
@@ -132,7 +152,7 @@
               until you are ready.
             </p>
           </details>
-          <details>
+          <details id="features-automation">
             <summary>
               <strong>What features/automations will there be?</strong>
             </summary>
@@ -149,14 +169,14 @@
             </p>
           </details>
           <details>
-            <summary>
+            <summary id="srd-content">
               <strong>What about SRD content?</strong>
             </summary>
             <p>
               With the new CGL upate we are allowed to include all SRD content, which should be ready for the first official release.
             </p>
           </details>
-          <details>
+          <details id="void-playtest">
             <summary>
               <strong>What about the Void playtest content?</strong>
             </summary>
@@ -164,7 +184,7 @@
               The Void playtest materials are not part of the SRD and therefore can't be included with the system. However, the system makes it easily possible to add custom domains and (sub)classes.
             </p>
           </details>
-          <details>
+          <details id="artwork">
             <summary>
               <strong>Will you include the official artwork?</strong>
             </summary>
@@ -172,14 +192,22 @@
               The official artwork is not part of the SRD and therefore can't be included with the system. However, you will be able to provide your own artwork for everything. We aim to include as much (non-official) artwork as possible.
             </p>
           </details>
-          <details>
+          <details id="setup-github">
             <summary>
               <strong>How can I install the system from the GitHub repository?</strong>
             </summary>
             <p>We currently do not offer any support to do a manual installation of the system from the code in the repository. Please wait until an official version has been released, then you can just install it like any other system from within Foundry directly.
             </p>
           </details>
-          <details>
+          <details id="demiplane">
+            <summary>
+              <strong>What about Demiplane intergration?</strong>
+            </summary>
+            <p>
+              Demiplane currently has no API to make any integration possible. However, we have reached out to them and will be actively talking with the Demiplane to see if any kind of integration would be possible. This is most likely a feature for a later release however, or possibly even a separate module.
+            </p>
+          </details>
+          <details id="other questions">
             <summary>
               <strong>I have another Question!</strong>
             </summary>
