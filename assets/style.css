@@ -1,5 +1,5 @@
 :root {
-  --bg: #17123b;
+  --bg: #070510;
   --text: 245,245,245;
   --accent: #81cdc3;
   --card-bg: #1e194d;
@@ -138,7 +138,10 @@ header.big h1 span {
   header h1 span {
     font-size: 0;
   }
-  
+  nav a {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem !important;
+  }
 }
 
 header .branding {
