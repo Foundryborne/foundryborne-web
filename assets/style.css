@@ -30,7 +30,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  border-bottom: 2px solid rgba(129, 205, 195, 1);
+  border-image: linear-gradient(147deg, #382D7A 0%, #36337F 12%, #324590 30%, #2C63AB 50%, #2878BE 61%, #81CDC3 100%) 1;
+  border-bottom: 4px solid;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: heavy;
@@ -76,7 +77,8 @@ header h1 {
   padding: 0.75rem 1.25rem;
   border-radius: 8px;
   transition: background 0.2s ease-in-out;
-  background: linear-gradient(135deg,rgba(55, 45, 122, 1) 20%, rgba(129, 205, 195, 1) 100%);
+  background: linear-gradient(147deg, #382D7A 0%, #36337F 12%, #324590 30%, #2C63AB 50%, #2878BE 61%, #81CDC3 100%);
+
 }
 
 .buttons a:hover {
