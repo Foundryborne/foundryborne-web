@@ -247,7 +247,7 @@ section {
 }
 
 #footer a:hover {
-  color: #5b3ea6;
+  color: var(--card-bg)
 }
 
 summary {
