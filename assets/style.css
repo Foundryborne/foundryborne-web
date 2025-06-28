@@ -172,3 +172,7 @@ header h1 {
 #footer a:hover {
   color: #5b3ea6;
 }
+
+summary {
+  font-size: 1.4em;
+}
