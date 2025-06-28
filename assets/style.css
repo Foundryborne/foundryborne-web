@@ -176,3 +176,11 @@ header h1 {
 summary {
   font-size: 1.4em;
 }
+
+.faq-link {
+  color: inherit;
+  text-decoration: none;
+}
+.faq-link:hover {
+  text-decoration: underline;
+}
