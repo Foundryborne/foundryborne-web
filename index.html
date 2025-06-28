@@ -26,33 +26,47 @@
     </script>
   </head>
   <body>
-    <header>
-      <div
-        style="
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 1rem;
-          flex-wrap: wrap;
-        "
-      >
-        <div style="display: flex; align-items: center; gap: 1rem">
-          <img src="assets/foundryborne.png" alt="Daggerheart System Logo" />
-          <h1>Foundryborne - a Daggerheart System for FoundryVTT</h1>
-        </div>
-        <nav>
-          <div class="buttons">
-            <a href="index.html">Home</a>
-            <a href="https://foundryvtt.com/packages/daggerheart">Install</a>
-            <a href="https://github.com/Foundryborne/daggerheart">GitHub</a>
-            <a href="https://discord.gg/HnUt2AtwbD">Join the Discord</a>
-            <a href="faq.html">FAQ</a>
-            <!-- <a href="#screenshots">Screenshots</a>
-      <a href="#video">Watch Overview</a> -->
-          </div>
-        </nav>
-      </div>
+    <header id="header" class="notransition">
+      <a href="index.html"><div class="branding">
+        <img src="assets/foundryborne.png" alt="Daggerheart System Logo"/>
+        <h1>Foundryborne<br>
+        <span>a Daggerheart System for FoundryVTT</span></h1>
+      </div></a>
+      <nav>        
+        <a href="https://github.com/Foundryborne/daggerheart" target="_blank">GitHub</a>
+        <a href="https://discord.gg/HnUt2AtwbD" target="_blank">Join the Discord</a>
+        <a href="#faq">FAQ</a>
+        <!--<a href="https://foundryvtt.com/packages/daggerheart" class="special" target="_blank">Install</a>-->
+        <a href="#" class="special" >Install</a>
+      </nav>
     </header>
+
+    <script type="text/javascript">
+      function updateHeaderClass() {
+        var header = document.getElementById('header');
+
+        if (window.innerWidth > 770) {
+          if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+            header.classList.remove('big');
+          } else {
+            header.classList.add('big');
+          }
+        } else {
+          header.classList.remove('big');
+        }
+      }
+
+      window.addEventListener("load", function () {
+        var header = document.getElementById('header');
+        updateHeaderClass();
+        setTimeout(function () {
+          header.classList.remove('notransition');
+        }, 50);
+      });
+
+      window.addEventListener("resize", updateHeaderClass);
+      window.addEventListener('scroll', updateHeaderClass);
+    </script>
 
     <div class="container">
       <section class="description">
@@ -169,6 +183,50 @@
           This site will grow with new features, documentation, and updates.
           Bookmark us and check back soon!
         </p>
+      </section>
+      <section class="section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq">
+          <details>
+            <summary><strong>(How) Can I contribute?</strong></summary>
+            <p>
+              Please join the Discord server and check the projects github
+              repository. We’re always looking for contributors to help with
+              development.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <strong>I'm not a developer — can I still contribute?</strong>
+            </summary>
+            <p>
+              Yes! Whenever we need non-developer support, we’ll ask the community
+              for help — including testing. Just keep an eye on
+              <code>#general</code> (in the future, there will be a dedicated
+              announcements channel).
+            </p>
+          </details>
+
+          <details>
+            <summary><strong>When will the system be available?</strong></summary>
+            <p>Very, very soon</p>
+          </details>
+
+          <details>
+            <summary>
+              <strong>Is there a preview? Can I help with testing?</strong>
+            </summary>
+            <p>
+              Not yet. There's still a lot of work ahead. Once the basics are in
+              place — like damage rolls, a basic character sheet, and a few core
+              features — we’ll start offering previews and testing opportunities.
+              We’ll announce it in the Discord server once there’s a dedicated
+              announcements channel.
+            </p>
+          </details>
+        </div>
       </section>
     </div>
   </body>
