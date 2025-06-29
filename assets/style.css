@@ -144,6 +144,7 @@ header.big h1 span {
 @media screen and (max-width: 790px) {
   header {
     padding: 0.5rem 1rem;
+    width: calc(100% - 2rem);
   }
 
   header h1 {
