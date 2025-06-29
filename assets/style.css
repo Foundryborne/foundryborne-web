@@ -174,7 +174,6 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-left: 2rem;
   justify-content:flex-end;
   transition: var(--transition);
 }
