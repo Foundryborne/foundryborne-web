@@ -15,6 +15,16 @@
   --transition: all 0.2s ease;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f5f5;
+    --text: 7, 5, 16;
+    --accent: #36337f;
+    --card-bg: #1e194d;
+  }
+}
+
+
 body {
   height: 100%;
   margin: 0;
@@ -27,7 +37,7 @@ main.content {
   flex: 1 0 auto;
 }
 
-#footer {
+footer {
   flex-shrink: 0;
 }
 
@@ -233,23 +243,25 @@ section {
   transition: transform 0.3s ease;
 }
 
-#footer {
+footer {
+  --text: 245,245,245;
   margin-top: 4rem;
   padding: 2rem 1rem;
   font-size: 0.875rem;
-  color: var(--text);
+  color: rgb(var(--text));
   background: var(--card-bg);
   text-align: center;
-  border-top: 2px solid var(--accent);
+  border-image: var(--gradient) 1;
+  border-top: 4px solid;
 }
 
-#footer a {
+footer a {
   color: var(--accent);
   text-decoration: underline;
   transition: color 0.2s ease-in-out;
 }
 
-#footer a:hover {
+footer a:hover {
   color: var(--card-bg)
 }
 
