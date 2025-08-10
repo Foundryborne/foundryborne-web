@@ -73,7 +73,7 @@
         
         <section class="description">
           <h1>This is <span class="special">Daggerheart</span> for Foundry.</h1>
-          <p>Welcome to the unofficial, <1>community made</i>
+          <p>Welcome to the unofficial, community made</i>
             <strong>Daggerheart</strong> system for
             <strong>FoundryVTT</strong>.<br />This system is designed to capture
             the full flavor of the 2d12 Hope & Fear dice mechanics, character
@@ -114,10 +114,58 @@
 <section id="release-notes">
   <h2>Release Notes</h2>
   <div class="release-log">
+<details>
+      <summary><strong>v1.0.1 – Care Package 1</strong></summary>
+<h2>Foundryborne Release Announcement</h2>
+
+  <p>The <strong>Foundryborne</strong> team is proud to announce the first Care Package update to the Daggerheart System.</p>
+  <h3>Changelog</h3>
+  <p><b>New Features & Improvements</b></p>
+    <ul>
+      <li>The option to drag features between adversary sheets to quickly add a copy of an existing feature to a new adversary has been added.</li>
+      <li>You can now right-click features that restore "per session". In the future there will be a "new session" for the GM that will automate this.</li>
+      <li>A spotlight button has been added to give the spotlight to a player without using the combat tracker</li>
+      <li>Custom icon artwork for the combat wheelchair has been added. Special thanks to @CyrensMaps for creating them!</li>
+      <ul><li>In addition, the credits in the Welcome journal have been adjusted</li></ul>
+      <li>Updated the system background image to include the Foundryborne logo.</li>
+    </ul>
+  <p><b>Bug Fixes</b></p>
+    <ul>
+      <li>The Feature "Unconscious" spelling has been corrected.</li>
+      <li>Adversary Features should now correctly remove the associated Fear cost.</li>
+      <li>The Issue with armor features that prevented some drag&drop actions on armor items has been resolved.</li>
+      <li>Fixed a crash on experience selection.</li>
+      <li>Fixed a subclass error on multiclassing.</li>
+      <li>Fixed so multiclasses do not gain the hope feature for the class.</li>
+      <li>Fixed so Class/Subclass features are properly deleted on delevel.</li>
+      <li>Removed automatic deletion of features on delevel when not using levelup auto.</li>
+      <li>Custom (Homebrew) Domains now have their name displayed correctly and can be select in the multiclass selection screen.</li>
+      <li>A fix for bards rally dice showing in damage dialog when it should not.</li>
+      <li>Resolved an issue with the "reliable" weapon feature not working as intended.</li>
+      <li>Resolved an issue where Seraphs Prayer Dice did not increase with the spellcast modifier.</li>
+      <li>Resolved an issue where the Seaborne community option was not correctly displayed on character sheets.</li>
+      <li>Fixed a display issue with action buttons in chat messages.</li>
+      <li>Improved the display of reaction rolls in chat, to make it more clear that roll was reaction roll and not a regular duality dice roll.</li>
+      <li>Resolved an issue with beastform transformations breaking when using wildcard images for the character or beastform.</li>
+      <li>Resolved an issue where control buttons were not visible on the fear tracker in bar mode under certain conditions.</li>
+      <li>Resolved an issue where Sneak Attack would not be displayed as an option.</li>
+      <li>Resolved several issues with the adversaries.</li>
+      <li>Resolved an issue that broke compendium sorting when importing a whole compendium.</li>
+      <li>Fixed various spelling mistakes.</li>
+      <li>Resolved an issue with action buttons being vesible despite not having the permission to use them.</li>
+      <li>Resolved an issue with some item, feature, and action names being displayed incorrectly.</li>
+      <li>Improved the tooltips for traits in the character sheet to display the foll name of each trait in the tooltip.</li>
+      <li>Resolved an issue with damage formulas based on hope/fear results.</li>
+    </ul>
+  </p>
+
+  <p>Please note that for some of the bugfixes to apply you would have to recreate the player/companion actor, drag the adversary out from the compendium again or replace any updated item/feature on the character sheet.</p>
+  <p>Please also remember to create a backup of your world before installing the update, just in case.</p>
+    </details>
 
     <details>
       <summary><strong>v1.0.0 – Initial Public Release</strong></summary>
-<h2>Daggerheart Release Announcement</h2>
+<h2>Foundryborne Release Announcement</h2>
 
   <p>The <strong>Foundryborne</strong> team is proud to announce the first stable release of the <em>Daggerheart</em> Game System for Foundry VTT — <code>v1.0.0</code> is now live!</p>
 
