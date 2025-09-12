@@ -3,6 +3,7 @@
   --text: 245,245,245;
   --accent: #81cdc3;
   --card-bg: #1e194d;
+  --release-notes-bg: #1e1e1e;
   --gradient: linear-gradient(
       147deg,
       #382d7a 0%,
@@ -21,6 +22,7 @@
     --text: 7, 5, 16;
     --accent: #36337f;
     --card-bg: #1e194d;
+    --release-notes-bg: hsl(0, 0%, 95%);
   }
 }
 
@@ -316,19 +318,19 @@ span.special {
 }
 
 #release-notes details {
-margin-bottom: 1em;
-background: #1e1e1e;
-padding: 1em;
-border-radius: 8px;
-border: 1px solid #333;
+  margin-bottom: 1em;
+  background: var(--release-notes-bg);
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid #333;
 }
 
 #release-notes summary {
-cursor: pointer;
-font-size: 1.1em;
+  cursor: pointer;
+  font-size: 1.1em;
 }
 
 #release-notes ul {
-margin-top: 0.5em;
-padding-left: 1.5em;
+  margin-top: 0.5em;
+  padding-left: 1.5em;
 }
