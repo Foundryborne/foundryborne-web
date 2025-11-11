@@ -89,11 +89,8 @@
         <section id="screenshots">
           <h2>Screenshot Gallery</h2>
           <div class="gallery">
-            <img
-              src="assets/Foundryborne_1.0.0_Screenshot.png"
-              alt="Foundryborne 1.0.0 Release Screenshot"
-              onclick="openLightbox(this)"
-              />
+            <img src="assets/Foundryborne_1.2.0_Screenshot-1.png" alt="Foundryborne 1.2.0 Release Screenshot" onclick="openLightbox(this)" />
+            <img src="assets/Foundryborne_1.2.0_Screenshot-2.png" alt="Foundryborne 1.2.0 Release Screenshot" onclick="openLightbox(this)" />
             <!-- Add more images here -->
           </div>
           <!-- Lightbox overlay -->
@@ -108,6 +105,112 @@
           <p><a href="https://github.com/Foundryborne/daggerheart/wiki/Known-Issues-and-Workarounds">Known Issues</a></p>
           <div class="release-log">
           <!-- New Patch: copy a <details> section -->
+            <details>
+              <summary><strong>v1.2 – Partying Capybara</strong></summary>
+              <h2>Foundryborne Release Announcement</h2>
+              <p>The <strong>Foundryborne</strong> team is proud to announce the release of version 1.2 (Partying Capybara) for the Foundryborne Daggerheart System.</p>
+              <h3>Changelog</h3>
+              <h4>New Features</h4>
+              <ul>
+                  <li>
+                      <strong>Party Actor</strong>: Create a new Actor for your party! Including stats overview, shared inventory and a "clown car" mode to easily move the whole party around!
+                  </li>
+                  <li>
+                      <strong>Light mode support</strong>: In the previous versions there were a few issues with people using the light mode. It is now fully supported and everything is readable, no matter which theme!
+                  </li>
+                  <li>
+                      <strong>Group Rolls</strong>: Full support for group roles, with a custom group roll dialog.
+                  </li>
+                  <li>
+                      <strong>Sheet display options</strong>: If you prefer to have "pips" instead of actual numbers for HP, Stress and Armor Slots (Just like the paper sheets), you can now find an option for this in the system settings!
+                  </li>
+                  <li>
+                      <strong>New countdown system</strong>: We completely rewrote the old countdown system, and the new one should work a lot better.
+                  </li>
+                  <li>
+                      <strong>Attribution Feature</strong>: Added Attribution to system items so that the author and other information can be set.
+                  </li>
+                  <li>
+                      <strong>Beastform Wildcards</strong>: Added Support for Wildcard tokens for beastforms.
+                  </li>
+                  <li>
+                      <strong>Direct Damage</strong>: Direct Damage is now fully supported!
+                  </li>
+                  <li>
+                      <strong>Auto-Expanding Roll Messages</strong>: Find a new setting in the system options to auto-expand dice rolls in chat messages!
+                  </li>
+                  <li>
+                      <strong>Better Homebrew support</strong>: You can now add custom featurs to Weapons & Armor, as well as custom Adversary types!
+                  </li>
+                  <li>
+                      <strong>Per Scene measurments</strong>: You can now override the Daggerheart measurements for every scene individually. Set what Melee|Close etc means on the scene, or disable the system ruler to use standard Grid units instead.
+                  </li>
+                  <li>
+                      <strong>New Daggerheart Menu</strong>: It has a lot of GM tools! Expect more in future updates.
+                  </li>
+                  <li>
+                      <strong>Simple Sheets</strong>: A new sheet type to view actors with limited observer permissions.
+                  </li>
+                  <li>
+                      <strong>Compendium Browser Update</strong>: Custom compendiums are now included in the compendium browser (and are now shown during character creation as well)!
+                  </li>
+                  <li>
+                      <strong>Better Character Creation</strong>: Background and Connection questions are now added to all classes and can be added during character creation.
+                  </li>
+                  <li>
+                      <strong>Better Weapons</strong>: Weapons now can have a custom damage formula!
+                  </li>
+                  <li>
+                      <strong>Level Up Choices</strong>: You can now review the choices you made while leveling up your character.
+                  </li>
+                  <li>
+                      <strong>Companion Protection Initiative</strong>: Companions no longer show up in the combat tracker. They are now save. Please don't hurt them.
+                  </li>
+                  <li>
+                      <strong>Spotlight Tracker Improvements</strong>: You can now see the order in which players requested the spotlight!
+                  </li>
+              </ul>
+              <h4>Bug Fixes</h4>
+              <ul>
+                  <li>Updated all SRD entries to make sure they reflect the latest errata.</li>
+                  <li>Several Bugfixes &amp; fixed typos, including wrong dice or damage type.</li>
+                  <li>Fixed the display of chat messages that are not supposed to be displayed, as they are redundant.</li>
+                  <li>Resolved several issues where effects were not or incorrectly applied.</li>
+                  <li>Updated the default view of the Loadout and Vault views to List View.</li>
+                  <li>Resolved several issues with the character creation process, and updated the order in which the characters are created to reflect the core rules.</li>
+                  <li>Resolved several issues with the sheet layouts so they should look better even with longer names/descriptions, which also helps the community translations.</li>
+                  <li>Resolved an issue where consumable items were not actually consumed on use.</li>
+                  <li>Resolved an issue where observer permissions would allow a player to use or edit items on other players sheets.</li>
+                  <li>Resolved an issue with scrolling battle text to better handle situations where multiple changes happen at the same time.</li>
+                  <li>Updated the Font styling to be more consistent, which makes it easier for custom modules to override the fonts.</li>
+                  <li>Resolved an issue where the hope cost for experiences would not be correctly automated in the dice roll dialog.</li>
+                  <li>Resolved an issue where the description for your experiences tooltip would not be displayed in the dice roll dialog when hovering over an experience.</li>
+              </ul>
+              </p>
+              <p>Please also remember to create a backup of your world before installing the update, just in case.</p>
+              <p>Manifest URL: <a href="https://github.com/Foundryborne/daggerheart/releases/download/1.2/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.2/system.json</a></p>
+            </details>
+            <details>
+              <summary><strong>v1.1.1 – Serene Capybara</strong></summary>
+              <h2>Foundryborne Release Announcement</h2>
+              <p>The <strong>Foundryborne</strong> team is proud to announce the release of version 1.1.1 (Serene Capybara) for the Foundryborne Daggerheart System.</p>
+              <h3>Changelog</h3>
+              <h4>Bug Fixes</h4>
+              <ul>
+                <li>Resolved an issue where class and multiclass features and their effects could be applied and shown before being unlocked.</li>
+                <li>Resolved an issue where the GM was unable to see the Hit/Miss on attack messages from player rolls.</li>
+                <li>Resolved an issue where the Compendium Browser was not filtering subclasses correctly. Now it only shows the subclasses available for the chosen class during character creation.</li>
+                <li>Resolved an issue where new actors would have the 'defeated' condition incorrectly applied initially.</li>
+                <li>Resolved an issue where inline buttons would not fit with the text height (please add `inline:true` to any inline buttons).</li>
+                <li>Resolved an issue where Drag&amp;Drop areas would not show a hint to indicate that you could drop an item, like the subclasses field in the class item.</li>
+                <li>Resolved an issue where Active Effects were not correctly applying a bonus to spellcast rolls.</li>
+                <li>Resolved an issue where the basic attack damage in the sidebar for adversaries did not correctly update for the Horde type.</li>
+                <li>Resolved an issue where some text in chat messages had the incorrect style, making them hard to read.</li>
+              </ul>
+              </p>
+              <p>Please also remember to create a backup of your world before installing the update, just in case.</p>
+              <p>Manifest URL: <a href="https://github.com/Foundryborne/daggerheart/releases/download/1.1.1/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.1.1/system.json</a></p>
+          </details>
           <details>
               <summary><strong>v1.1.2 – Tiny Capybara</strong></summary>
               <h2>Foundryborne Release Announcement</h2>
@@ -145,7 +248,7 @@
               </p>
               <p>Please also remember to create a backup of your world before installing the update, just in case.</p>
               <p>Manifest URL: <a href="https://github.com/Foundryborne/daggerheart/releases/download/1.1.1/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.1.1/system.json</a></p>
-            </details>
+          </details>
           <details>
               <summary><strong>v1.1.0 – Vanguard Capybara</strong></summary>
               <h2>Foundryborne Release Announcement</h2>
