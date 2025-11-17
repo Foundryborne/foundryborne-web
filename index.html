@@ -112,7 +112,7 @@
         <div class="release-log">
           <!-- New Patch: copy a <details> section -->
           <details>
-            <summary><strong>v1.2.1 – Partying Capybara</strong></summary>
+            <summary><strong>v1.2.2 – Partying Capybara</strong></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>The <strong>Foundryborne</strong> team is proud to announce the release of version 1.2 (Partying
               Capybara) for the Foundryborne Daggerheart System.</p>
@@ -239,9 +239,44 @@
                 cause it to error out.</li>
             </ul>
             </p>
+            <h3>Version 1.2.2</h3>
+            <h4>Bug Fixes</h4>
+            <ul>
+              <li><b>Compendium Browser</b> Resolved an issue where entries in the Compendium Browser failed to load
+                correctly.</li>
+              <li><b>Compendium Browser</b> Resolved an issue where the *clear filter* button resulted in an empty list
+                of results instead of clearing the filters correctly.</li>
+              <li><b>Party Actor</b> Resolved an issue where deleting Actors that were in a Party would leave them stuck
+                in the Party list instead of being removed from the party as well.</li>
+              <li><b>Party Actor</b> Companions and Adversaries can now both be added to Party Sheets and have their
+                ressources displayed correctly. They can not be part of Group Rolls or Tag Team Rolls however.</li>
+              <li><b>Party Actor</b> Resolved an issue where the edit and delete button for the Party Inventory were not
+                displayed correctly in some cases.</li>
+              <li><b>Party Actor</b> Resolved an iossue with the Hope/Fear automation for Group Rolls. (Rerolls have to
+                be changed manually however)</li>
+              <li><b>Beastform</b> Resolved an issue where the Beastform transformation got stuck on a druid and could
+                not be disabled.</li>
+              <li><b>Beastform</b> Removed the context menu entry for cancelling Beastforms and instead changing the
+                Beastform button to Cancel Beastform when it is active.</li>
+              <li><b>Beastform</b> The Beastform token wildcard selector now has scrolling enabled for cases where a lot
+                of beastform images were available.</li>
+              <li><b>Countdowns</b> The Countdown UI is now hidden for players when they don't have any visible
+                countdowns (this covers both "no countdowns" and "no permissions to view any countdowns").</li>
+              <li><b>Dice Rolls</b> Resolved an issue that could cause errors when making a roll without having a
+                character active.</li>
+              <li><b>Features</b> Resolved an issue where Ancestry and Community Features would not be displayed int he
+                Ancestry or Community description.</li>
+            </ul>
+            <h4>Compendium Fixes</h4>
+            <ul>
+              <li><b>Clarity of Nature</b> Resolved an issue where using a resource would cause an error.</li>
+              <li><b>Galapa Retract</b> Resolved an issue where the effect was not applied to the actor correctly.</li>
+              <li><b>Channel Raw Power</b> Resolved an issue where the ability would have a hit point cost to use.</li>
+            </ul>
+            </p>
             <p>Please also remember to create a backup of your world before installing the update, just in case.</p>
             <p>Manifest URL: <a
-                href="https://github.com/Foundryborne/daggerheart/releases/download/1.2.1/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.2.1/system.json</a>
+                href="https://github.com/Foundryborne/daggerheart/releases/download/1.2.2/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.2.2/system.json</a>
             </p>
           </details>
           <details>
@@ -535,7 +570,8 @@
             <summary><strong>v1.0.0 – Initial Public Release</strong></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>The <strong>Foundryborne</strong> team is proud to announce the first stable release of the
-              <em>Daggerheart</em> Game System for Foundry VTT — <code>v1.0.0</code> is now live!</p>
+              <em>Daggerheart</em> Game System for Foundry VTT — <code>v1.0.0</code> is now live!
+            </p>
             <p>We deeply appreciate your patience and support throughout development. This milestone marks just the
               beginning — we’re excited to bring even more features and improvements in future updates.</p>
             <hr />
@@ -548,7 +584,9 @@
             <p>Search for 🔍 <code>Daggerheart</code> in the system installation section of Foundry's admin interface.
             </p>
             <p>Or use our manifest URL to install the latest version:<br>
-              📦 <a href="https://github.com/Foundryborne/daggerheart/releases/download/1.0.0/system.json" target="_blank" rel="noopener noreferrer">https://github.com/Foundryborne/daggerheart/releases/download/1.0.0/system.json</a>
+              📦 <a href="https://github.com/Foundryborne/daggerheart/releases/download/1.0.0/system.json"
+                target="_blank"
+                rel="noopener noreferrer">https://github.com/Foundryborne/daggerheart/releases/download/1.0.0/system.json</a>
             </p>
             <hr />
             <h3>Features</h3>
