@@ -1,0 +1,64 @@
+<header id="header" class="notransition">
+    <a href="/">
+        <div class="branding">
+            <img src="assets/foundryborne.png" alt="Daggerheart System Logo" />
+            <h1>
+                Foundryborne<br />
+                <span>a Daggerheart System for FoundryVTT</span>
+            </h1>
+        </div>
+    </a>
+    <nav>
+        <a href="index.html" class="{% if page.url == '/index.html' or page.url == '/' %}active{% endif %}">Home</a>
+        <a href="changelog.html" class="{% if page.url == '/changelog.html' %}active{% endif %}">Changelog</a>
+        <a href="faq.html" class="{% if page.url == '/faq.html' %}active{% endif %}">FAQ</a>
+        <a href="https://github.com/Foundryborne/daggerheart/wiki" target="_blank">Documentation <svg
+                class="external-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg></a>
+        <a href="https://discord.gg/HnUt2AtwbD" target="_blank">Discord <svg class="external-icon"
+                xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg></a>
+        <a href="https://github.com/Foundryborne/daggerheart" target="_blank">GitHub <svg class="external-icon"
+                xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg></a>
+        <a href="https://foundryvtt.com/packages/daggerheart" class="special" target="_blank">Install</a>
+    </nav>
+    <script type="text/javascript">
+        function updateHeaderClass() {
+            var header = document.getElementById("header");
+
+            if (window.innerWidth > 1024) {
+                if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
+                    header.classList.remove("big");
+                } else {
+                    header.classList.add("big");
+                }
+            } else {
+                header.classList.remove("big");
+            }
+        }
+
+        window.addEventListener("load", function () {
+            var header = document.getElementById("header");
+            updateHeaderClass();
+            setTimeout(function () {
+                header.classList.remove("notransition");
+            }, 50);
+        });
+
+        window.addEventListener("resize", updateHeaderClass);
+        window.addEventListener("scroll", updateHeaderClass);
+    </script>
+</header>
