@@ -35,6 +35,9 @@
         function openLightbox(imgElement) {
             const lightbox = document.getElementById("lightbox");
             const lightboxImg = document.getElementById("lightbox-img");
+            // Gather all gallery images
+            lightboxImages = Array.from(document.querySelectorAll('.gallery img')).map(img => img.src);
+            currentIndex = lightboxImages.indexOf(imgElement.src);
             lightboxImg.src = imgElement.src;
             lightbox.style.display = "flex";
         }
@@ -42,6 +45,23 @@
         function closeLightbox() {
             const lightbox = document.getElementById("lightbox");
             lightbox.style.display = "none";
+        }
+
+        let lightboxImages = [];
+        let currentIndex = 0;
+
+        function prevImage(event) {
+            event.stopPropagation();
+            if (lightboxImages.length === 0) return;
+            currentIndex = (currentIndex - 1 + lightboxImages.length) % lightboxImages.length;
+            document.getElementById("lightbox-img").src = lightboxImages[currentIndex];
+        }
+
+        function nextImage(event) {
+            event.stopPropagation();
+            if (lightboxImages.length === 0) return;
+            currentIndex = (currentIndex + 1) % lightboxImages.length;
+            document.getElementById("lightbox-img").src = lightboxImages[currentIndex];
         }
 
         // Back to Top Button

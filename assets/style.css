@@ -154,7 +154,7 @@ header.big h1 span {
 @media screen and (max-width: 790px) {
   header {
     padding: 0.5rem 1rem;
-    width: calc(100% - 2rem);
+    width: 100%;
   }
 
   header h1 {
@@ -262,13 +262,30 @@ section {
   cursor: zoom-out;
 }
 
-.lightbox img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  user-select: none;
+  z-index: 1000;
 }
+
+.lightbox-prev {
+  left: 10px;
+}
+
+.lightbox-next {
+  right: 10px;
+}
+
 
 footer {
   --text: 245, 245, 245;
