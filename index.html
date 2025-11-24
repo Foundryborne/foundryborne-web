@@ -14,24 +14,32 @@ title: Foundryborne - Daggerheart FoundryVTT System
 <section id="learn-more">
   <h2>About the System</h2>
   <p>
-    The system includes complete character creation using card choices, Hope and Fear dice mechanics, Fear tracker,
-    optional automation, customization and unique features tailored for the Daggerheart experience, like the encounter
-    tracker and the optional countdown tracker.
-    <br />
-    With the Introduction of the Party Actor, the support for Group Rolls and Tag Team Rolls has been added.
-    <br />
-    Additionally extensive Homebrew support, for custom domains, classes, subclasses, ancestries, communities, domain
-    cards, features and items.
+    Foundryborne captures the full flavor of Daggerheart with complete character creation, Hope & Fear mechanics, and
+    extensive automation tools.
+  </p>
+  <p>
+    <a href="features.html" class="button">View All Features</a>
   </p>
 </section>
 <section id="screenshots">
   <h2>Screenshot Gallery</h2>
+  <h3>Main Screenshots</h3>
   <div class="gallery">
-    <img src="assets/Foundryborne_1.2.0_Screenshot-1.png" alt="Foundryborne 1.2.0 Release Screenshot"
+    <img src="assets/screenshots/main/Foundryborne_1.2.0_Screenshot-1.png" alt="Main Screenshot 1"
       onclick="openLightbox(this)" />
-    <img src="assets/Foundryborne_1.2.0_Screenshot-2.png" alt="Foundryborne 1.2.0 Release Screenshot"
+    <img src="assets/screenshots/main/Foundryborne_1.2.0_Screenshot-2.png" alt="Main Screenshot 2"
       onclick="openLightbox(this)" />
-    <!-- Add more images here -->
+    <!-- Add more main images here -->
+  </div>
+  <h3>Settings Screenshots</h3>
+  <div class="gallery">
+    {% assign settings_images = site.static_files | where_exp:"file","file.path contains
+    '/assets/screenshots/settings/'" %}
+    {% for file in settings_images %}
+    {% assign filename = file.path | split: '/' | last %}
+    {% assign title = filename | replace: '.png','' | replace: '.jpg','' | replace: '.jpeg','' | replace: '.gif','' %}
+    <img src="{{ file.path }}" alt="{{ title }}" title="{{ title }}" onclick="openLightbox(this)" />
+    {% endfor %}
   </div>
   <!-- Lightbox overlay -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">

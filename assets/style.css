@@ -376,3 +376,52 @@ span.special {
 #backToTopBtn:hover {
   background-color: #555;
 }
+
+/* Features Page */
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.feature-item ul {
+  padding-left: 1.2rem;
+}
+
+.feature-item li {
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: #26225d;
+  color: rgb(var(--text));
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background: #36337f;
+  color: rgb(var(--text));
+}
