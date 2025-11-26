@@ -11,7 +11,7 @@ title: Release Notes - Foundryborne
     <div class="release-log">
         <!-- New Patch: copy a <details> section -->
         <details>
-            <summary><strong>v1.2.5 – Partying Capybara</strong></summary>
+            <summary><strong>v1.2.7 – Partying Capybara</strong></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
                 The <strong>Foundryborne</strong> team is proud to announce the release of version 1.2 (Partying
@@ -345,13 +345,54 @@ title: Release Notes - Foundryborne
                     Updated all weapons to show the item image on the basic attack when selecting from multiple actions.
                 </li>
             </ul>
+            <h3>Version 1.2.6</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>Added Adversary Critical Threshold. If it's set to lower than the standard 20 in Edit mode, then it
+                    will be displayed on the sheet and used as the number to beat to score a critical hit.</li>
+                <li>Countdowns will now make proper rolls activating DiceSoNice and producing chat messages when rolls
+                    are made to determine Randomized Start Values, both initially and on looping.</li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where right-clicking the Party Token would cause errors in the Party Token HUD.
+                </li>
+                <li>
+                    Resolved an issue where looping countdows with randomized start values (for example (loop 1d6)) were
+                    not being randomized correctly on each loop.
+                </li>
+            </ul>
+            <h3>Version 1.2.7</h3>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where de-leveling a character could get stuck if Domain Cards picked during
+                    levelup were missing for any reason.
+                </li>
+                <li>
+                    Resolved an issue where selecting a multiclass during level up could fail to properly set the
+                    selected subclass.
+                </li>
+                <li>
+                    Resolved an issue where the TagTeamRoll Dialog could get stuck with 'ghost' characters if characters
+                    are removed from the party.
+                </li>
+                <li>
+                    Resolved an issue where applying Effects from chat messages would fail if there was an attached
+                    saving throw.
+                </li>
+                <li>
+                    Resolved an issue with the description of the 'Burning' weapon feature being incorrect.
+                </li>
+            </ul>
             <p>
                 Please also remember to create a backup of your world before installing the update, just in case.
             </p>
             <p>
                 Manifest URL:
                 <a
-                    href="https://github.com/Foundryborne/daggerheart/releases/download/1.2.5/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.2.5/system.json</a>
+                    href="https://github.com/Foundryborne/daggerheart/releases/download/1.2.7/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.2.7/system.json</a>
             </p>
         </details>
         <details>
