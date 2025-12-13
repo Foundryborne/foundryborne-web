@@ -11,7 +11,7 @@ title: Release Notes - Foundryborne
     <div class="release-log">
         <!-- New Patch: copy a <details> section -->
         <details>
-            <summary><strong>v1.3.0 – Tactical Capybara</strong></summary>
+            <summary><strong>v1.3.2 – Tactical Capybara</strong></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
                 The <strong>Foundryborne</strong> team is proud to announce the release of version 1.3.0 (Tactical
@@ -97,13 +97,98 @@ title: Release Notes - Foundryborne
                     href="https://github.com/Foundryborne/daggerheart/wiki/Theming-and-Style-Rules">Theming and Style
                     Rules</a>
             </p>
+            <h3>Version 1.3.1</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    <strong>Currency Settings</strong>: All currency denominations can now be disabled in the homebrew
+                    section if no coin tracking at all is desired.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where the Downtime dialog would fail to open.
+                </li>
+                <li>
+                    Resolved an issue where TagTeamDialog crit damage was not correctly calculated when a multi-dice
+                    formula was present (ex: 2d6).
+                </li>
+                <li>
+                    Fixed various localization misses.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    Updated text for <strong>Book Of Grynn</strong> and <strong>Splintering Strike</strong> with errata
+                    text.
+                </li>
+                <li>
+                    <strong>Improved Small Dagger</strong> is now correctly set as a secondary weapon.
+                </li>
+            </ul>
+            <h3>Version 1.3.2</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    <strong>Massive Damage</strong>: Added the variant rule for massive damage to the system settings.
+                </li>
+                <li>
+                    <strong>Currency Inputs</strong>: Currency inputs are now delta inputs. You can for example write -4
+                    or +4 and alter the value by that, rather than the final value.
+                </li>
+                <li>
+                    <strong>Currency Icons</strong>: The currency inputs can now optionally have a font-awesome icon
+                    next to them.
+                </li>
+                <li>
+                    <strong>Spotlight Request Queue</strong>: Added a Spotlight Request Queue checkbox setting that
+                    defaults to not being on. We've found that letting players request the spotlight and having it get
+                    ordered from oldest to newest can often be a bad thing, as it is essentially recreating an
+                    initiative order. You can still enable it if you do want this.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where Countdown automated progression wasn't working when triggered by a player
+                    due to permissions.
+                </li>
+                <li>
+                    (Battlepoints) Calculation correction when multiples of one category were in the encounter. (IE, 3x
+                    Standard --> 6 BP)
+                </li>
+                <li>
+                    Resolved an issue where the <code>/dr</code> command has working automation when used with a
+                    character again.
+                </li>
+                <li>
+                    Fixed certain cases of hope/fear automation not setting the resources correctly on reroll. All in
+                    all, if you had issues with hope/fear automation, it should be solved with this version.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    <strong>Guardian's Iron Will</strong>: Feature corrected to let you use an extra armor slot against
+                    damage, rather than spending 1 stress.
+                </li>
+                <li>
+                    Multiple Adversaries/Environments have been corrected to use direct damage for certain
+                    features/attacks.
+                </li>
+                <li>
+                    <strong>Wings Of Light</strong>: Stress cost added.
+                </li>
+            </ul>
             <p>
                 Please also remember to create a backup of your world before installing the update, just in case.
             </p>
             <p>
                 Manifest URL:
                 <a
-                    href="https://github.com/Foundryborne/daggerheart/releases/download/1.3.0/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.3.0/system.json</a>
+                    href="https://github.com/Foundryborne/daggerheart/releases/download/1.3.2/system.json">https://github.com/Foundryborne/daggerheart/releases/download/1.3.2/system.json</a>
             </p>
         </details>
         <details>
