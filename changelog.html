@@ -9,7 +9,115 @@ title: Release Notes - Foundryborne
         <a href="https://github.com/Foundryborne/daggerheart/wiki/Known-Issues-and-Workarounds">Known Issues</a>
     </p>
     <div class="release-log">
-        <!-- New Patch: copy a <details> section -->
+        <details>
+            <summary><strong>v1.4.0 – Festive Capybara</strong></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 1.4.0 (Festive
+                Capybara) for the Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    <strong>Adversary Token Sizes</strong>: Added TokenSize for Adversaries. These are size categories
+                    you can easily apply to adversaries to set them to predefined, uniform sizes (Tiny, Small, Medium,
+                    Large etc). You can edit the token sizes attached to them in the Homebrew Settings.
+                </li>
+                <li>
+                    <strong>Adversary Features</strong>: Features for Adversaries/Environments now have an ActionForm
+                    (Passive|Action|Reaction) that is displayed next to their name in the sheet.
+                </li>
+                <li>
+                    <strong>Tooltips</strong>: Large visual improvements on tooltips.
+                </li>
+                <li>
+                    <strong>Sheet Improvements</strong>: Improved namefields in the sheets to wrap for longer names.
+                </li>
+                <li>
+                    <strong>Chat Messages</strong>: Saving Throw entries in chat messages now display the token name
+                    rather than the actor name.
+                </li>
+                <li>
+                    <strong>Currency Transfer</strong>: You can now drag and drop currency from one character/party to
+                    another to transfer the same way you do for quantities of items.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Players rolling reaction rolls from chat messages wouldn't register correctly. Fixed.
+                </li>
+                <li>
+                    Rolling reaction rolls from chat messages could fail to work with DiceSoNice active. Fixed.
+                </li>
+                <li>
+                    Using an experience and simultaniously receiving automated hope on rolling didn't work correctly.
+                    Fixed.
+                </li>
+                <li>
+                    Fixed a bug during levelup where you couldn't select an increase on an experience you gained during
+                    the levelup process.
+                </li>
+                <li>
+                    When taking Downtime, subclass features a character didn't have access to would show up as about to
+                    be refreshed. Fixed.
+                </li>
+                <li>
+                    The Extra-Damage effect from the BattlePoints section in the CombatTracker was being applied to
+                    Characters added to combat. Fixed.
+                </li>
+                <li>
+                    Fixed an error that could cause TagTeamRolls not to be created properly.
+                </li>
+                <li>
+                    Fixed RangeDependant effect automation (such as the Paried item feature) to be based on player
+                    targeting something in range.
+                </li>
+                <li>
+                    Drag-selecting in inputs - such as resource inputs - on the character sheet lead to unexpected
+                    behavior. Fixed.
+                </li>
+                <li>
+                    Fixed chat styles breaking in stream mode.
+                </li>
+                <li>
+                    Sheet Experience section would get wack when an experience name was really long. Fixed.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    All adversaries have had TokenSizes added.
+                </li>
+                <li>
+                    All beastforms have had TokenSizes added.
+                </li>
+                <li>
+                    All adversaries have had the hardcoded instances of their names removed from features and actions,
+                    replaced with a dynamic @lookup. This means if you change the name of the adversary, or drag the
+                    feature to another adversary, the name in the text will be updated.
+                </li>
+                <li>
+                    Removed adversary action descriptions that just copied the feature description. This means there's
+                    only one place to edit instead of two when changing it.
+                </li>
+                <li>
+                    <strong>Wings Of Light</strong>: Corrected to be self-applied.
+                </li>
+                <li>
+                    <strong>Conjure Swarm</strong>: Now correctly lowers incoming damage severity.
+                </li>
+                <li>
+                    <strong>Elundrian Chain Armor</strong>: Name corrected.
+                </li>
+            </ul>
+            <p>
+                As a note - since Features now have an attached ActionForm (Passive, Action, Reaction) but they didn't
+                previously - existing adversaries outside of the updated SRD Compendium will have defaulted to show
+                Passive.
+            </p>
+        </details>
         <details>
             <summary><strong>v1.3.2 – Tactical Capybara</strong></summary>
             <h2>Foundryborne Release Announcement</h2>
