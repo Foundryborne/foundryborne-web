@@ -10,7 +10,7 @@ title: Release Notes - Foundryborne
     </p>
     <div class="release-log">
         <details id="v1.4.0">
-            <summary><strong>v1.4.5 – Festive Capybara</strong> <a href="#v1.4.0" onclick="event.stopPropagation()"
+            <summary><strong>v1.4.6 – Festive Capybara</strong> <a href="#v1.4.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -47,26 +47,30 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Players rolling reaction rolls from chat messages wouldn't register correctly. Fixed.
+                    Resolved an issue where players rolling reaction rolls from chat messages wouldn't register
+                    correctly.
                 </li>
                 <li>
-                    Rolling reaction rolls from chat messages could fail to work with DiceSoNice active. Fixed.
+                    Resolved an issue where rolling reaction rolls from chat messages could fail to work with DiceSoNice
+                    active.
                 </li>
                 <li>
-                    Using an experience and simultaniously receiving automated hope on rolling didn't work correctly.
-                    Fixed.
+                    Resolved an issue where using an experience and simultaneously receiving automated hope on rolling
+                    didn't work correctly.
                 </li>
                 <li>
                     Fixed a bug during levelup where you couldn't select an increase on an experience you gained during
                     the levelup process.
                 </li>
                 <li>
-                    When taking Downtime, subclass features a character didn't have access to would show up as about to
-                    be refreshed. Fixed.
+                    Resolved an issue where subclass features a character didn't have access to would show up as about
+                    to
+                    be refreshed when taking Downtime.
                 </li>
                 <li>
-                    The Extra-Damage effect from the BattlePoints section in the CombatTracker was being applied to
-                    Characters added to combat. Fixed.
+                    Resolved an issue where the Extra-Damage effect from the BattlePoints section in the CombatTracker
+                    was being applied to
+                    Characters added to combat.
                 </li>
                 <li>
                     Fixed an error that could cause TagTeamRolls not to be created properly.
@@ -76,14 +80,16 @@ title: Release Notes - Foundryborne
                     targeting something in range.
                 </li>
                 <li>
-                    Drag-selecting in inputs - such as resource inputs - on the character sheet lead to unexpected
-                    behavior. Fixed.
+                    Resolved an issue where drag-selecting in inputs - such as resource inputs - on the character sheet
+                    lead to unexpected
+                    behavior.
                 </li>
                 <li>
                     Fixed chat styles breaking in stream mode.
                 </li>
                 <li>
-                    Sheet Experience section would get wack when an experience name was really long. Fixed.
+                    Resolved an issue where the Sheet Experience section would display incorrectly when an experience
+                    name was really long.
                 </li>
             </ul>
             <h4>Compendium Updates</h4>
@@ -156,13 +162,14 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Hope/Fear automation would fail in a certain case. Fixed.
+                    Resolved an issue where Hope/Fear automation would fail in a certain case.
                 </li>
                 <li>
                     Added scrolling to the homebrew system settings menu.
                 </li>
                 <li>
-                    Evolved beastforms didn't let you select wildcard images upon selecting a form to evolve. Fixed.
+                    Resolved an issue where evolved beastforms didn't let you select wildcard images upon selecting a
+                    form to evolve.
                 </li>
                 <li>
                     Fixed so that you can drag-select inputs in Adversary/Environment sheets.
@@ -179,7 +186,7 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Beastforms could get stuck when tokens were deleted. Fixed.
+                    Resolved an issue where Beastforms could get stuck when tokens were deleted.
                 </li>
             </ul>
             <h3 id="v1.4.5">Version 1.4.5 <a href="#v1.4.5" onclick="event.stopPropagation()"
@@ -194,19 +201,22 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    The <code>/dr</code> chat command failed when used without having a character selected. Fixed.
+                    Resolved an issue where the <code>/dr</code> chat command failed when used without having a
+                    character selected.
                 </li>
                 <li>
                     Corrected that the <code>@Lookup</code> command wouldn't resolve names and other things in actions
                     used from an actor rather than a token.
                 </li>
                 <li>
-                    TagTeamDialog would error if a roll had been selected and the originating ChatMessage was then
-                    deleted. Fixed.
+                    Resolved an issue where TagTeamDialog would error if a roll had been selected and the originating
+                    ChatMessage was then
+                    deleted.
                 </li>
                 <li>
-                    Homebrew Weapon/Armor Feature descriptions would display weirdly in the sheet select if they were
-                    made with styled HTML. Fixed.
+                    Resolved an issue where Homebrew Weapon/Armor Feature descriptions would display weirdly in the
+                    sheet select if they were
+                    made with styled HTML.
                 </li>
                 <li>
                     Corrected so that RangeDependentEffects such as Paired works correctly for different sized tokens
@@ -224,6 +234,15 @@ title: Release Notes - Foundryborne
                 </li>
                 <li>
                     Fixed Stardrop description.
+                </li>
+            </ul>
+            <h3 id="v1.4.6">Version 1.4.6 <a href="#v1.4.6" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where unlinked tokens present in a combat could cause the combat tab to not
+                    render.
                 </li>
             </ul>
         </details>
