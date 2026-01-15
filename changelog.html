@@ -9,6 +9,87 @@ title: Release Notes - Foundryborne
         <a href="https://github.com/Foundryborne/daggerheart/wiki/Known-Issues-and-Workarounds">Known Issues</a>
     </p>
     <div class="release-log">
+        <details id="v1.5.0">
+            <summary><strong>v1.5.0 – Creative Capybara</strong> <a href="#v1.5.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 1.5.0 (Creative
+                Capybara) for the Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    <strong>Roll Effect Toggles</strong>: In Roll Dialogs you can now toggle relevant effects that
+                    modify the outcome instead of having to active/deactive effects elsewhere.
+                </li>
+                <li>
+                    <strong>Scene Environments</strong>: Added Scene Environments, allowing you to link environments to
+                    a scene for quick access.
+                </li>
+                <li>
+                    <strong>Summon Action</strong>: Implemented the Summon action to allow easily summoning multiple
+                    adversaries via an action.
+                </li>
+                <li>
+                    <strong>Trigger System</strong>: Added a Trigger system. This allows actions to register macros to
+                    run at specified occurrences in the system.
+                </li>
+                <li>
+                    <strong>Item Descriptions</strong>: Weapons and Armors now display the descriptions of any Item
+                    Features they have in the item description.
+                </li>
+                <li>
+                    <strong>Active Effects</strong>: Added <code>system.rules.dualityRoll.defaultHopeDice</code> and
+                    <code>system.rules.dualityRoll.defaultFearDice</code> as ActiveEffect paths to set the default
+                    hope/fear dice in the roll dialog for a character.
+                </li>
+                <li>
+                    <strong>Domain Touched</strong>: Domain Cards can now setup Domain Touched, meaning they are
+                    disabled unless X amount of cards from their domain are in the characters loadout.
+                </li>
+                <li>
+                    <strong>Vault Active</strong>: Domain Cards can now be set to Vault Active, meaning that their
+                    effects function even when they're in the vault.
+                </li>
+                <li>
+                    <strong>Loadout Ignore</strong>: Domain Cards can now be set to Loadout Ignore, meaning that they
+                    don't take up any space in the loadout.
+                </li>
+                <li>
+                    <strong>Beastform Scale</strong>: Beastforms can now set a Scale for the transform image if
+                    required.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where the light/dark mode could appear incorrectly in the Daggerheart sidebar
+                    menu.
+                </li>
+                <li>
+                    Resolved an issue where Adversary custom Critical Threshold was incorrectly applying to reaction
+                    rolls.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    Added Triggers for <strong>Strange Patterns</strong> and <strong>Ferocity</strong>.
+                </li>
+                <li>
+                    Added Summon actions on relevant Adversaries.
+                </li>
+                <li>
+                    Domain Cards updated with Domain Touched, Vault Active and Loadout Ignore.
+                </li>
+                <li>
+                    Updated Adversaries and Environments with defaultHopeDice and defaultFearDice ActiveEffects to apply
+                    on characters.
+                </li>
+            </ul>
+        </details>
         <details id="v1.4.0">
             <summary><strong>v1.4.6 – Festive Capybara</strong> <a href="#v1.4.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
