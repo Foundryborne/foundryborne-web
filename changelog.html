@@ -9,6 +9,111 @@ title: Release Notes - Foundryborne
         <a href="https://github.com/Foundryborne/daggerheart/wiki/Known-Issues-and-Workarounds">Known Issues</a>
     </p>
     <div class="release-log">
+        <details id="v1.6.0" open>
+            <summary><strong>v1.6.0</strong> Busy Capybara <a href="#v1.6.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 1.6.0 for the
+                Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    <strong>Death Rolls</strong>: Fully implemented Death Rolls with dice rolling, effects, healing and
+                    scars.
+                </li>
+                <li>
+                    <strong>Defeated Handling</strong>: Automation now toggles on/off the various conditions that occur
+                    during death moves.
+                </li>
+                <li>
+                    <strong>Fate Rolls</strong>: Added chat commands for Fate Rolls.
+                </li>
+                <li>
+                    <strong>Character Reset</strong>: Added the ability to reset a character through the character sheet
+                    context menu.
+                </li>
+                <li>
+                    <strong>Rolltables</strong>: Enhanced the system's Rolltables so you can set multiple roll formulas
+                    and then select which one to use via a select.
+                </li>
+                <li>
+                    <strong>Companion Levelup</strong>: Characters can now set an ActiveEffect to give their companion
+                    bonus levelup choices.
+                </li>
+                <li>
+                    <strong>Companion Token</strong>: Characters with a companion can now rightclick their token to
+                    bring out and hide it away with clowncar behavior like how the party works.
+                </li>
+                <li>
+                    <strong>Damage Multipliers</strong>: ActiveEffects can now set a damage multiplier -for- an actor,
+                    so they for instance deal double damage.
+                </li>
+                <li>
+                    <strong>Incoming Damage Multipliers</strong>: ActiveEffects can now set a damage multiplier -on- an
+                    actor, so they for instance take double damage.
+                </li>
+                <li>
+                    <strong>Scene Environments</strong>: SceneEnvironments will now register any triggers they have if
+                    their scene is active.
+                </li>
+                <li>
+                    <strong>Fear/Hope Automation</strong>: <code>/dr</code> chat commands can now specify
+                    <code>grantResources=true</code> to make the roll use fear/hope automation.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where a multiclass character's spellcast modifier wouldn't be properly shown and
+                    used if the multiclass was a non-spellcaster and caster.
+                </li>
+                <li>
+                    Resolved an issue where secret blocks in descriptions were not being shown because of a faulty call
+                    checking for ownership.
+                </li>
+                <li>
+                    Resolved an issue where actions without descriptions had stopped their fallback behavior to show the
+                    Feature's description.
+                </li>
+                <li>
+                    Resolved an issue where Companions' attacks did not add the character's instinct modifier correctly.
+                </li>
+                <li>
+                    Resolved an issue where Companions' attack range ended up weird when it was increased by levelup.
+                </li>
+                <li>
+                    Resolved an issue where using a Companion's Action button in the sheet to make a roll included the
+                    Character's experiences instead of the Companion's.
+                </li>
+                <li>
+                    Improved performance when dragging many adversaries at the same time.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    Updated Beastbound features that should give the companion bonus levelup choices to have effects
+                    that do that.
+                </li>
+                <li>
+                    Seaborne community feature Know The Tide now has a trigger that automatically gives it a token when
+                    you roll with fear.
+                </li>
+                <li>
+                    Updated Adversaries with Features using the new damage multiplier ActiveEffects.
+                </li>
+                <li>
+                    Updated Rolltables to have multiple formulas for Common|Uncommon|Rare|Legendary.
+                </li>
+                <li>
+                    Removed the trigger form the domain card Ferocity as it was triggering incorrectly. It'll be redone
+                    in a later version.
+                </li>
+            </ul>
+        </details>
         <details id="v1.5.0">
             <summary><strong>v1.5.5 – Creative Capybara</strong> <a href="#v1.5.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
