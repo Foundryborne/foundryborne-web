@@ -12,7 +12,7 @@ title: Release Notes - Foundryborne
     </p>
     <div class="release-log">
         <details id="v1.7.0" open>
-            <summary><strong>v1.7.1</strong> Reactive Capybara <a href="#v1.7.0" onclick="event.stopPropagation()"
+            <summary><strong>v1.7.2</strong> Reactive Capybara <a href="#v1.7.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -115,6 +115,58 @@ title: Release Notes - Foundryborne
                 </li>
                 <li>
                     Improved the translation for Downtime prepare activities.
+                </li>
+            </ul>
+            <h3 id="v1.7.2">Version 1.7.2 <a href="#v1.7.2" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    All items such as classes and subclasses should now show their features in their descriptions to aid
+                    with Character Creation and more.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where performing a reroll on a DualityRoll when advantage/disadvantage was present
+                    would produce an extra dice.
+                </li>
+                <li>
+                    Resolved an issue where a Horde at half or lower health would have all its damage altered instead of
+                    just the standard attack.
+                </li>
+                <li>
+                    Resolved an issue where Distance Measure on hover did not consider the elevation of the tokens to
+                    calculate distance.
+                </li>
+                <li>
+                    Resolved an issue where Distance Measure on hover would error if tokens were overlapping.
+                </li>
+                <li>
+                    Resolved an issue where certain compendium actions/effects could not be deleted while in a
+                    compendium.
+                </li>
+                <li>
+                    Resolved an issue where effects on an item in a compendium could not be enabled/disabled.
+                </li>
+                <li>
+                    Resolved an issue where ActiveEffects altering the amount of scars would not properly decrease max
+                    hope.
+                </li>
+                <li>
+                    Resolved an issue where Advantage/Disadvantage Source ActiveEffects could not be set on adversaries
+                    and companions.
+                </li>
+                <li>
+                    Resolved an issue where the Scene settings for customizing the narrative distances (close,
+                    veryClose..) on a specific scene wouldn't save when edited.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    Various corrections to ranges, names and attack bonuses for Adversaries. (itsmecipher-dev)
                 </li>
             </ul>
         </details>
