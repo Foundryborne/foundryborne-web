@@ -11,7 +11,68 @@ title: Release Notes - Foundryborne
             Issues <sub>[Wiki]</sub></a>
     </p>
     <div class="release-log">
-        <details id="v1.7.0" open>
+        <details id="v1.8.0" open>
+            <summary><strong>v1.8.0</strong> <a href="#v1.8.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 1.8.0 for the
+                Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Added automation for applying and removing the Vulnerable condition to actors as their stress changes.
+                </li>
+                <li>
+                    Domain Cards in the Character Sheet's Domain Card gridview now show the recall cost.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where deleting an environment item that was set as a SceneEnvironment caused an error.
+                </li>
+                <li>
+                    Resolved an issue where transferring items between actors without permission would remove the item from the giver, but not actually give it over.
+                </li>
+                <li>
+                    Resolved an issue where pure damage rolls would only show DiceSoNice rolling on the acting user's side while others did not see a roll.
+                </li>
+                <li>
+                    Resolved an issue where the stock Foundry diceRoll sound would play even though DiceSoNice had been used.
+                </li>
+                <li>
+                    Resolved an issue where saving a Homebrew Feature/DowntimeMove didn't actually save it until you also hit Save Changes on the homebrew menu itself.
+                </li>
+                <li>
+                    Resolved an issue where trying to edit an effect on a Homebrew Feature produced an error.
+                </li>
+                <li>
+                    Resolved an issue where editing the description of a Homebrew Feature and then adding an effect made the written description disappear.
+                </li>
+                <li>
+                    Resolved an issue where items that had a Weapon/Armor feature on them that was then deleted from the world would not open properly.
+                </li>
+                <li>
+                    Resolved an issue where the titles for DualityRoll ChatMessages got the wrong, dark colour in Light Mode.
+                </li>
+                <li>
+                    Resolved an issue where the Limited Character Sheet was positioning the domain block wrong in Firefox.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    The Bard no longer has two different Rally features to handle the leveled up version. There is only one that properly handles all cases.
+                </li>
+                <li>
+                    Added an explanation to resource selection in the Strange Patterns trigger.
+                </li>
+            </ul>
+        </details>
+        <details id="v1.7.0">
             <summary><strong>v1.7.2</strong> Reactive Capybara <a href="#v1.7.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
