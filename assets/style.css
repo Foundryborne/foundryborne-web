@@ -19,7 +19,7 @@
     --bg: #f5f5f5;
     --text: 7, 5, 16;
     --accent: #36337f;
-    --card-bg: #1e194d;
+    --card-bg: #ffffff;
     --release-notes-bg: hsl(0, 0%, 95%);
   }
 }
@@ -85,7 +85,7 @@ a img:hover {
 
 header {
   --text: 245, 245, 245;
-  background: var(--card-bg);
+  background: #1e194d;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -293,7 +293,7 @@ footer {
   padding: 2rem 1rem;
   font-size: 0.875rem;
   color: rgb(var(--text));
-  background: var(--card-bg);
+  background: #1e194d;
   text-align: center;
   border-image: var(--gradient) 1;
   border-top: 4px solid;
@@ -431,7 +431,7 @@ span.special {
 .button {
   display: inline-block;
   background: #26225d;
-  color: rgb(var(--text));
+  color: rgb(245, 245, 245);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -440,5 +440,5 @@ span.special {
 
 .button:hover {
   background: #36337f;
-  color: rgb(var(--text));
+  color: rgb(245, 245, 245);
 }
