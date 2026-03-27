@@ -123,6 +123,29 @@ title: Release Notes - Foundryborne
                     Resolved an issue where automatically destroying consumables on empty was causing issues, as their chat message actions require them to still exist until the action is finished. The option to automatically destroy consumables on empty has been removed.
                 </li>
             </ul>
+            <h3 id="v1.9.6">Version 1.9.6 <a href="#v1.9.6" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <p>
+                With v14 just around the corner, we're putting a freeze on new features for v13. Larger bugs being found may still get fixed on the 1.9 Foundryborne line of versions, but we've been focused on v14 for a good while, aiming for a release in tandem with it becoming stable. 
+            </p>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Added an optional system keybinding for spotlighting a hovered or selected token on the canvas during an encounter.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where base resources had lost their labels in the ActiveEffect autocomplete.
+                </li>
+                <li>
+                    Resolved an issue where resources could have their current value higher than its maximum when using an ActiveEffect modifying the maximum.
+                </li>
+                <li>
+                    Resolved an issue where the EffectsDisplay in the top-right did not get updated right away if an effect was edited.
+                </li>
+            </ul>
         </details>
         <details id="v1.8.0">
             <summary><strong>v1.8.0</strong> <a href="#v1.8.0" onclick="event.stopPropagation()"
