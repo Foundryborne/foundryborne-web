@@ -46,7 +46,7 @@ body {
 
 main.content {
   flex: 1;
-  padding-top: 6rem;
+  padding-top: 8rem;
   /* Space for fixed header */
 }
 
@@ -184,7 +184,6 @@ header .branding {
   padding: 0.75rem 1rem;
   font-size: 0.95rem;
   border-bottom: 2px solid var(--accent);
-  margin-top: -1rem; /* slight visual tweak if needed, or 0 */
 }
 
 .notice-banner strong {
