@@ -11,7 +11,82 @@ title: Release Notes - Foundryborne
             Issues <sub>[Wiki]</sub></a>
     </p>
     <div class="release-log">
-        <details id="v1.9.0" open>
+        <details id="v2.0.0" open>
+            <summary><strong>v2.0.0</strong> <a href="#v2.0.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                Daggerheart 2.0.0 <br />
+                Our new release for Foundry V14. This marks the break in new features for V13 as development will be
+                based on the newest version. <br />
+                Note that a majority of modules are unlikely to be available on v14 at this point.
+            </p>
+            <p>
+                💾 We've tested it quite a bit, but as always, back up your world data using Foundry's backup feature if
+                you're updating an existing world. 💾
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    (Active Effects) Relevant Daggerheart durations can now be set, letting them automatically expire as
+                    their durations end.
+                </li>
+                <li>
+                    (Active Effects) Effects can now be set to stacking behavior. The current stack value can then be
+                    used on the active effect to give a bonus or penalty based on the number of stacks.
+                </li>
+                <li>
+                    Reworked armor to handle and show the individual sources of armor on a character for granular
+                    handling, and so that shields and more can be used without an armor.
+                </li>
+                <li>
+                    Reworked the TagTeamRoll functionality. Should be a lot simpler and better.
+                </li>
+                <li>
+                    Added an optional, bindable system hotkey for spotlighting tokens on the canvas. This now works
+                    outside of combat.
+                </li>
+                <li>
+                    (Beastform) The druid's Evolution feature now simply lets you choose which trait you want to buff
+                    within the beastform transform dialog instead of having many active effects to juggle.
+                </li>
+                <li>
+                    (Beastform) When transformed, the effect tooltip in the top right of the screen will show the
+                    information about your current beastform for reference.
+                </li>
+                <li>
+                    The DamageRoll dialog now has a toggle for rolling critical damage.
+                </li>
+                <li>
+                    Emanation Templates will now resize and center on any token they are placed on, making them work
+                    well with larger tokens.
+                </li>
+                <li>
+                    Added buttons for falling and collision damage in the Daggerheart GM Menu.
+                </li>
+                <li>
+                    Reworked all damage data under the hood. This enforces that there can only be one instance of hit
+                    point damage and never multiple.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where rerolling a to-hit roll from a non-crit into a crit would not make you roll
+                    critical damage.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    A listing of functionally meaningfully changed SRD items can be found below.<br />
+                    <a href="https://github.com/Foundryborne/daggerheart/wiki/V14-Compendium-Updates"
+                        target="_blank">V14 Compendium Updates</a>
+                </li>
+            </ul>
+        </details>
+        <details id="v1.9.0">
             <summary><strong>v1.9.0</strong> <a href="#v1.9.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
@@ -26,28 +101,35 @@ title: Release Notes - Foundryborne
                     Added Transform Actions to handle multi-phase Adversaries.
                 </li>
                 <li>
-                    Added support for custom Resources in System Settings Homebrew aswell as to be defined by modules. (See Wiki under 'Module Builder Information')
+                    Added support for custom Resources in System Settings Homebrew aswell as to be defined by modules.
+                    (See Wiki under 'Module Builder Information')
                 </li>
                 <li>
                     You can now set certain DiceSoNice animations on the Duality Dice in the Appearance system menu.
                 </li>
                 <li>
-                    Added a metagaming system menu intended to have options to control information available to players. Now has the option to hide hit/miss info in chat messages.
+                    Added a metagaming system menu intended to have options to control information available to players.
+                    Now has the option to hide hit/miss info in chat messages.
                 </li>
                 <li>
-                    Using the "Create Feature" button in the Character Sheet now brings up the option to open the Compendium Browser.
+                    Using the "Create Feature" button in the Character Sheet now brings up the option to open the
+                    Compendium Browser.
                 </li>
             </ul>
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where the Compendium Browser Setting for excluding/including compendiums was mistakenly set as a client setting instead of a world setting. GMs will need to reset their Compendium Browser settings after this patch.
+                    Resolved an issue where the Compendium Browser Setting for excluding/including compendiums was
+                    mistakenly set as a client setting instead of a world setting. GMs will need to reset their
+                    Compendium Browser settings after this patch.
                 </li>
                 <li>
-                    Resolved an issue where already easily available information was shown in the description for Weapons and Armor, this was removed when not in the Compendium Browser.
+                    Resolved an issue where already easily available information was shown in the description for
+                    Weapons and Armor, this was removed when not in the Compendium Browser.
                 </li>
                 <li>
-                    Resolved an issue where the tooltip for Domain Cards would not properly show the image for a homebrew domain.
+                    Resolved an issue where the tooltip for Domain Cards would not properly show the image for a
+                    homebrew domain.
                 </li>
                 <li>
                     Resolved an issue where altering Scars on a character could cause an error.
@@ -95,10 +177,12 @@ title: Release Notes - Foundryborne
                     Resolved an issue where the ItemBrowser Equipment section would not open.
                 </li>
                 <li>
-                    Resolved an issue where some tooltips, including the Encounter BP Helper, were erroring, making them become misplaced on the screen.
+                    Resolved an issue where some tooltips, including the Encounter BP Helper, were erroring, making them
+                    become misplaced on the screen.
                 </li>
                 <li>
-                    Resolved an issue where the SRD Environment folders had faulty typing, making it impossible to import a whole folder.
+                    Resolved an issue where the SRD Environment folders had faulty typing, making it impossible to
+                    import a whole folder.
                 </li>
             </ul>
             <h3 id="v1.9.4">Version 1.9.4 <a href="#v1.9.4" onclick="event.stopPropagation()"
@@ -109,7 +193,8 @@ title: Release Notes - Foundryborne
                     Resolved an issue where some characters could get stuck at 0 scars, being unable to gain any.
                 </li>
                 <li>
-                    Resolved an issue where it had become impossible to swap between Hit/Current targeting in chat roll messages.
+                    Resolved an issue where it had become impossible to swap between Hit/Current targeting in chat roll
+                    messages.
                 </li>
             </ul>
             <h3 id="v1.9.5">Version 1.9.5 <a href="#v1.9.5" onclick="event.stopPropagation()"
@@ -120,18 +205,23 @@ title: Release Notes - Foundryborne
                     Resolved an issue where tooltips could get stuck and were acting sluggish.
                 </li>
                 <li>
-                    Resolved an issue where automatically destroying consumables on empty was causing issues, as their chat message actions require them to still exist until the action is finished. The option to automatically destroy consumables on empty has been removed.
+                    Resolved an issue where automatically destroying consumables on empty was causing issues, as their
+                    chat message actions require them to still exist until the action is finished. The option to
+                    automatically destroy consumables on empty has been removed.
                 </li>
             </ul>
             <h3 id="v1.9.6">Version 1.9.6 <a href="#v1.9.6" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
             <p>
-                With v14 just around the corner, we're putting a freeze on new features for v13. Larger bugs being found may still get fixed on the 1.9 Foundryborne line of versions, but we've been focused on v14 for a good while, aiming for a release in tandem with it becoming stable. 
+                With v14 just around the corner, we're putting a freeze on new features for v13. Larger bugs being found
+                may still get fixed on the 1.9 Foundryborne line of versions, but we've been focused on v14 for a good
+                while, aiming for a release in tandem with it becoming stable.
             </p>
             <h4>Features</h4>
             <ul>
                 <li>
-                    Added an optional system keybinding for spotlighting a hovered or selected token on the canvas during an encounter.
+                    Added an optional system keybinding for spotlighting a hovered or selected token on the canvas
+                    during an encounter.
                 </li>
             </ul>
             <h4>Bugfixes</h4>
@@ -140,10 +230,12 @@ title: Release Notes - Foundryborne
                     Resolved an issue where base resources had lost their labels in the ActiveEffect autocomplete.
                 </li>
                 <li>
-                    Resolved an issue where resources could have their current value higher than its maximum when using an ActiveEffect modifying the maximum.
+                    Resolved an issue where resources could have their current value higher than its maximum when using
+                    an ActiveEffect modifying the maximum.
                 </li>
                 <li>
-                    Resolved an issue where the EffectsDisplay in the top-right did not get updated right away if an effect was edited.
+                    Resolved an issue where the EffectsDisplay in the top-right did not get updated right away if an
+                    effect was edited.
                 </li>
             </ul>
         </details>
@@ -159,7 +251,8 @@ title: Release Notes - Foundryborne
             <h4>Features</h4>
             <ul>
                 <li>
-                    Added automation for applying and removing the Vulnerable condition to actors as their stress changes.
+                    Added automation for applying and removing the Vulnerable condition to actors as their stress
+                    changes.
                 </li>
                 <li>
                     Domain Cards in the Character Sheet's Domain Card gridview now show the recall cost.
@@ -168,40 +261,50 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where deleting an environment item that was set as a SceneEnvironment caused an error.
+                    Resolved an issue where deleting an environment item that was set as a SceneEnvironment caused an
+                    error.
                 </li>
                 <li>
-                    Resolved an issue where transferring items between actors without permission would remove the item from the giver, but not actually give it over.
+                    Resolved an issue where transferring items between actors without permission would remove the item
+                    from the giver, but not actually give it over.
                 </li>
                 <li>
-                    Resolved an issue where pure damage rolls would only show DiceSoNice rolling on the acting user's side while others did not see a roll.
+                    Resolved an issue where pure damage rolls would only show DiceSoNice rolling on the acting user's
+                    side while others did not see a roll.
                 </li>
                 <li>
-                    Resolved an issue where the stock Foundry diceRoll sound would play even though DiceSoNice had been used.
+                    Resolved an issue where the stock Foundry diceRoll sound would play even though DiceSoNice had been
+                    used.
                 </li>
                 <li>
-                    Resolved an issue where saving a Homebrew Feature/DowntimeMove didn't actually save it until you also hit Save Changes on the homebrew menu itself.
+                    Resolved an issue where saving a Homebrew Feature/DowntimeMove didn't actually save it until you
+                    also hit Save Changes on the homebrew menu itself.
                 </li>
                 <li>
                     Resolved an issue where trying to edit an effect on a Homebrew Feature produced an error.
                 </li>
                 <li>
-                    Resolved an issue where editing the description of a Homebrew Feature and then adding an effect made the written description disappear.
+                    Resolved an issue where editing the description of a Homebrew Feature and then adding an effect made
+                    the written description disappear.
                 </li>
                 <li>
-                    Resolved an issue where items that had a Weapon/Armor feature on them that was then deleted from the world would not open properly.
+                    Resolved an issue where items that had a Weapon/Armor feature on them that was then deleted from the
+                    world would not open properly.
                 </li>
                 <li>
-                    Resolved an issue where the titles for DualityRoll ChatMessages got the wrong, dark colour in Light Mode.
+                    Resolved an issue where the titles for DualityRoll ChatMessages got the wrong, dark colour in Light
+                    Mode.
                 </li>
                 <li>
-                    Resolved an issue where the Limited Character Sheet was positioning the domain block wrong in Firefox.
+                    Resolved an issue where the Limited Character Sheet was positioning the domain block wrong in
+                    Firefox.
                 </li>
             </ul>
             <h4>Compendium Updates</h4>
             <ul>
                 <li>
-                    The Bard no longer has two different Rally features to handle the leveled up version. There is only one that properly handles all cases.
+                    The Bard no longer has two different Rally features to handle the leveled up version. There is only
+                    one that properly handles all cases.
                 </li>
                 <li>
                     Added an explanation to resource selection in the Strange Patterns trigger.
