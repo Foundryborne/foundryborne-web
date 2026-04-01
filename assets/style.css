@@ -177,6 +177,21 @@ header .branding {
   gap: 1rem;
 }
 
+.notice-banner {
+  background: var(--card-bg);
+  color: rgb(var(--text));
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border-bottom: 2px solid var(--accent);
+  margin-top: -1rem; /* slight visual tweak if needed, or 0 */
+}
+
+.notice-banner strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .container {
   max-width: 960px;
   margin: 2rem auto;
