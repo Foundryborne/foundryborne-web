@@ -1,0 +1,54 @@
+---
+layout: default
+title: Contact - Foundryborne
+description: Get in touch with the Foundryborne team for support, feedback, or collaboration.
+---
+
+<section class="contact-header">
+    <h1>Contact <span class="special">Us</span></h1>
+    <p>Have questions, feedback, or want to contribute? Reach out to the team!</p>
+</section>
+
+<section class="contact-container">
+    <div class="contact-info">
+        <div class="info-card">
+            <i class="fa-brands fa-discord icon"></i>
+            <h3>Discord</h3>
+            <p>Join our community for real-time support and discussion.</p>
+            <a href="https://discord.gg/HnUt2AtwbD" target="_blank" class="button">Join Discord</a>
+        </div>
+        <div class="info-card">
+            <i class="fa-brands fa-github icon"></i>
+            <h3>GitHub</h3>
+            <p>Report bugs or contribute code directly to the repository.</p>
+            <a href="https://github.com/Foundryborne/daggerheart" target="_blank" class="button">Visit GitHub</a>
+        </div>
+    </div>
+
+    <div class="contact-form-wrapper">
+        <form action="https://api.staticforms.dev/submit" method="POST" class="contact-form">
+            <input type="hidden" name="apiKey" value="sf_cf45c47beca4ee0da68ab83b">
+            <input type="text" name="honeypot" style="display: none;">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Type your message here..."
+                    required></textarea>
+            </div>
+
+            <input type="hidden" name="redirectTo" value="https://foundryborne.online/thanks.html">
+
+            <button type="submit" class="button special">Send Message</button>
+        </form>
+    </div>
+</section>

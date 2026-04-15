@@ -565,3 +565,136 @@ span.special {
   line-height: 1.5;
   margin: 0;
 }
+
+/* Contact Page */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 850px) {
+  .contact-container {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card .icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent);
+}
+
+.contact-form-wrapper {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(var(--text), 0.8);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: rgb(var(--text));
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(129, 205, 195, 0.2);
+}
+
+.contact-form button[type="submit"] {
+  align-self: flex-start;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* Thanks Page */
+.thanks-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  text-align: center;
+}
+
+.thanks-content {
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.thanks-icon {
+  font-size: 4rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.thanks-content h1 {
+  margin-top: 0;
+}
+
+.thanks-actions {
+  margin-top: 2rem;
+}
