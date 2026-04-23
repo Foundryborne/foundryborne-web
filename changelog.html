@@ -11,7 +11,84 @@ title: Release Notes - Foundryborne
             Issues <sub>[Wiki]</sub></a>
     </p>
     <div class="release-log">
-        <details id="v2.1.0" open>
+        <details id="v2.2.0" open>
+            <summary><strong>v2.2.0</strong> <a href="#v2.2.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 2.2.0 for the
+                Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Actions can now define areas. These are templates that can be placed from the chat message with a
+                    button.
+                </li>
+                <li>
+                    Action Areas can have effects bound to them that will be applied to tokens that enter the area and
+                    removed when leaving.
+                </li>
+                <li>
+                    One Party can now be set as the active one by rightclicking it in the actor tab. It can be opened
+                    using a system hotkey (default P).
+                </li>
+                <li>
+                    The active party size can be used as a value via @partySize
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where some translations were missing.
+                </li>
+                <li>
+                    Resolved an issue where dragging an adversary onto a scene failed if the user didn't have their
+                    assigned character present.
+                </li>
+                <li>
+                    Resolved an issue where the Character Creation layout for experiences with labels and separations was
+                    poorly organized.
+                </li>
+                <li>
+                    Resolved an issue where the counting of remaining trait scores in Character Creation was incorrect.
+                </li>
+                <li>
+                    Resolved an issue where resources on items failed to be restored on resting when their maximum value
+                    included math expressions.
+                </li>
+                <li>
+                    Resolved an issue where the drag/drop icon was incorrect when dragging items from the Compendium
+                    Browser.
+                </li>
+                <li>
+                    Resolved an issue where the new Party design was not responsive to light mode.
+                </li>
+                <li>
+                    Resolved an issue where some actions could not be opened in the homebrew downtime section.
+                </li>
+                <li>
+                    Resolved an issue where damage actions on weapons could not include item damage; they now use Item
+                    Damage to reference weapon damage.
+                </li>
+                <li>
+                    Resolved an issue where the TagTeamDialog's roll selection could render incorrectly, preventing
+                    damage rolls.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    Updated all SRD entries that used @Template in the descriptions to instead use Action Areas.
+                </li>
+                <li>
+                    Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several entries
+                    (Battle Cry, Retract, Low Light Living).
+                </li>
+            </ul>
+        </details>
+        <details id="v2.1.0">
             <summary><strong>v2.1.2</strong> <a href="#v2.1.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
@@ -233,7 +310,7 @@ title: Release Notes - Foundryborne
             </ul>
         </details>
         <details id="v1.9.0">
-            <summary><strong>v1.9.9</strong> <a href="#v1.9.0" onclick="event.stopPropagation()"
+            <summary><strong>v1.9.10</strong> <a href="#v1.9.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -436,6 +513,40 @@ title: Release Notes - Foundryborne
                 <li>
                     Resolved an issue in LightMode where the battlepoints menu text in the Encounter tab was impossible
                     to see.
+                </li>
+            </ul>
+            <h3 id="v1.9.10">Version 1.9.10 <a href="#v1.9.10" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where some translations were missing.
+                </li>
+                <li>
+                    Resolved an issue where dragging an adversary onto a scene failed if the user didn't have their
+                    assigned character present.
+                </li>
+                <li>
+                    Resolved an issue where the Character Creation layout for experiences with labels and separations was
+                    poorly organized.
+                </li>
+                <li>
+                    Resolved an issue where the counting of remaining trait scores in Character Creation was incorrect.
+                </li>
+                <li>
+                    Resolved an issue where resources on items failed to be restored on resting when their maximum value
+                    included math expressions.
+                </li>
+                <li>
+                    Resolved an issue where the drag/drop icon was incorrect when dragging items from the Compendium
+                    Browser.
+                </li>
+            </ul>
+            <h4>Compendium Updates</h4>
+            <ul>
+                <li>
+                    Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several entries
+                    (Battle Cry, Retract, Low Light Living).
                 </li>
             </ul>
         </details>
