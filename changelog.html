@@ -12,7 +12,7 @@ title: Release Notes - Foundryborne
     </p>
     <div class="release-log">
         <details id="v2.2.0" open>
-            <summary><strong>v2.2.0</strong> <a href="#v2.2.0" onclick="event.stopPropagation()"
+            <summary><strong>v2.2.1</strong> <a href="#v2.2.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -85,6 +85,41 @@ title: Release Notes - Foundryborne
                 <li>
                     Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several entries
                     (Battle Cry, Retract, Low Light Living).
+                </li>
+            </ul>
+            <h3 id="v2.2.1">Version 2.2.1 <a href="#v2.2.1" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Visual redesign of the Group Roll Dialog.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where Companions were not receiving their initial 3 max stress on creation.
+                </li>
+                <li>
+                    Resolved an issue where ActiveEffects with an Origin value (such as a Guardian's Unstoppable feature)
+                    weren't working correctly.
+                </li>
+                <li>
+                    Resolved an issue where ActiveEffects with a math expression value, such as the Paired weapon
+                    feature, were applied without being simplified (e.g., 1+1 rather than +2).
+                </li>
+                <li>
+                    Resolved an issue where ActiveEffects referencing certain values, such as BareBones referencing a
+                    character's Tier, could fail.
+                </li>
+                <li>
+                    Resolved an issue where Homebrew Item Features without effects (for example Macro) caused errors.
+                </li>
+                <li>
+                    Resolved an issue where new weapons couldn't be created on the Character Sheet.
+                </li>
+                <li>
+                    Resolved an issue where some translations were missing.
                 </li>
             </ul>
         </details>
@@ -310,7 +345,7 @@ title: Release Notes - Foundryborne
             </ul>
         </details>
         <details id="v1.9.0">
-            <summary><strong>v1.9.10</strong> <a href="#v1.9.0" onclick="event.stopPropagation()"
+            <summary><strong>v1.9.11</strong> <a href="#v1.9.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -547,6 +582,20 @@ title: Release Notes - Foundryborne
                 <li>
                     Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several entries
                     (Battle Cry, Retract, Low Light Living).
+                </li>
+            </ul>
+            <h3 id="v1.9.11">Version 1.9.11 <a href="#v1.9.11" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where Companions were not receiving their initial 3 max stress on creation.
+                </li>
+                <li>
+                    Resolved an issue where Homebrew Item Features without effects (for example Macro) caused errors.
+                </li>
+                <li>
+                    Resolved an issue where some translations were missing.
                 </li>
             </ul>
         </details>
