@@ -36,10 +36,17 @@
         function openLightbox(imgElement) {
             const lightbox = document.getElementById("lightbox");
             const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxCaption = document.getElementById("lightbox-caption");
             // Gather all gallery images
-            lightboxImages = Array.from(document.querySelectorAll('.gallery img')).map(img => img.src);
-            currentIndex = lightboxImages.indexOf(imgElement.src);
+            lightboxImages = Array.from(document.querySelectorAll('.gallery img')).map(img => ({
+                src: img.src,
+                title: img.title
+            }));
+            currentIndex = lightboxImages.findIndex(img => img.src === imgElement.src);
             lightboxImg.src = imgElement.src;
+            if (lightboxCaption) {
+                lightboxCaption.textContent = imgElement.title;
+            }
             lightbox.style.display = "flex";
         }
 
@@ -55,14 +62,18 @@
             event.stopPropagation();
             if (lightboxImages.length === 0) return;
             currentIndex = (currentIndex - 1 + lightboxImages.length) % lightboxImages.length;
-            document.getElementById("lightbox-img").src = lightboxImages[currentIndex];
+            document.getElementById("lightbox-img").src = lightboxImages[currentIndex].src;
+            const caption = document.getElementById("lightbox-caption");
+            if (caption) caption.textContent = lightboxImages[currentIndex].title;
         }
 
         function nextImage(event) {
             event.stopPropagation();
             if (lightboxImages.length === 0) return;
             currentIndex = (currentIndex + 1) % lightboxImages.length;
-            document.getElementById("lightbox-img").src = lightboxImages[currentIndex];
+            document.getElementById("lightbox-img").src = lightboxImages[currentIndex].src;
+            const caption = document.getElementById("lightbox-caption");
+            if (caption) caption.textContent = lightboxImages[currentIndex].title;
         }
 
         // Back to Top Button

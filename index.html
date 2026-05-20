@@ -22,34 +22,36 @@ title: Foundryborne - Daggerheart FoundryVTT System
   </p>
 </section>
 <section id="video-embed">
-  <div class="video-container" style="max-width: 800px; margin-left: auto; margin-right: auto; aspect-ratio: 16/9; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden;">
-    <iframe style="width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/9t9dCQG_J-E?si=v60eY4-gEZbP8E8I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="video-container"
+    style="max-width: 800px; margin-left: auto; margin-right: auto; aspect-ratio: 16/9; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden;">
+    <iframe style="width: 100%; height: 100%; border: none;"
+      src="https://www.youtube.com/embed/9t9dCQG_J-E?si=v60eY4-gEZbP8E8I" title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </section>
 <section id="screenshots">
   <h2>Screenshot Gallery</h2>
-  <h3>Main Screenshots</h3>
   <div class="gallery">
-    <img src="assets/screenshots/main/Foundryborne_1.2.0_Screenshot-1.png" alt="Main Screenshot 1"
+    <img src="assets/screenshots/main/character_creation.png" alt="Character Creation" title="Character Creation"
       onclick="openLightbox(this)" />
-    <img src="assets/screenshots/main/Foundryborne_1.2.0_Screenshot-2.png" alt="Main Screenshot 2"
-      onclick="openLightbox(this)" />
-    <!-- Add more main images here -->
-  </div>
-  <h3>Settings Screenshots</h3>
-  <div class="gallery">
-    {% assign settings_images = site.static_files | where_exp:"file","file.path contains
-    '/assets/screenshots/settings/'" %}
-    {% for file in settings_images %}
-    {% assign filename = file.path | split: '/' | last %}
-    {% assign title = filename | replace: '.png','' | replace: '.jpg','' | replace: '.jpeg','' | replace: '.gif','' %}
-    <img src="{{ file.path }}" alt="{{ title }}" title="{{ title }}" onclick="openLightbox(this)" />
-    {% endfor %}
+    <img src="assets/screenshots/main/character_roll_bars.png" alt="Character Roll (Bars View)"
+      title="Character Roll (Bars View)" onclick="openLightbox(this)" />
+    <img src="assets/screenshots/main/character_roll_pips.png" alt="Character Roll (Pips View)"
+      title="Character Roll (Pips View)" onclick="openLightbox(this)" />
+    <img src="assets/screenshots/main/journal_compendium-browser.png" alt="SRD Journal and Compendium Browser"
+      title="SRD Journal and Compendium Browser" onclick="openLightbox(this)" />
+    <img src="assets/screenshots/main/party-sheet_group-roll.png" alt="Party Sheet and Group Roll"
+      title="Party Sheet and Group Roll" onclick="openLightbox(this)" />
+    <img src="assets/screenshots/main/sheet-domain_card-attack_roll.png" alt="Domain Card and Attack Roll"
+      title="Domain Card and Attack Roll" onclick="openLightbox(this)" />
   </div>
   <!-- Lightbox overlay -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()" style="flex-direction: column;">
     <button class="lightbox-prev" onclick="prevImage(event)">&#9664;</button>
     <img id="lightbox-img" src="" alt="Enlarged screenshot" />
+    <div id="lightbox-caption"
+      style="color: #fff; margin-top: 1rem; font-size: 1.25rem; text-align: center; max-width: 90%;"></div>
     <button class="lightbox-next" onclick="nextImage(event)">&#9654;</button>
   </div>
 </section>
