@@ -90,6 +90,40 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        // Auto-rotate gallery
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.querySelector('.gallery');
+            if (!gallery) return;
+            
+            let autoScrollInterval;
+            
+            const startScroll = () => {
+                autoScrollInterval = setInterval(() => {
+                    // Check if reached the end (with a small 10px buffer)
+                    if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
+                        gallery.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        // Scroll by the width of one image plus the gap (1rem = 16px)
+                        const firstImg = gallery.querySelector('img');
+                        const scrollStep = firstImg ? firstImg.clientWidth + 16 : 300;
+                        gallery.scrollBy({ left: scrollStep, behavior: 'smooth' });
+                    }
+                }, 3000);
+            };
+
+            const stopScroll = () => {
+                clearInterval(autoScrollInterval);
+            };
+
+            startScroll();
+            
+            // Pause on hover or touch
+            gallery.addEventListener('mouseenter', stopScroll);
+            gallery.addEventListener('mouseleave', startScroll);
+            gallery.addEventListener('touchstart', stopScroll, {passive: true});
+            gallery.addEventListener('touchend', startScroll, {passive: true});
+        });
     </script>
 </head>
 
