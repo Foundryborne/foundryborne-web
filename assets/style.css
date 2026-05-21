@@ -18,8 +18,8 @@
     --card-bg: rgba(255, 255, 255, 0.5);
     --card-border: rgba(24, 22, 46, 0.4);
     --release-notes-bg: #ffffff;
-    --gradient: linear-gradient(15deg, #efe6d8 0%, #a778b1 42%, #18162e 100%);
-    --text-gradient: linear-gradient(45deg, #1488cc 0%, #2b32b2 100%);
+    --gradient: linear-gradient(15deg, #efe6d8 0%, #eaaf42 42%, #18162e 100%);
+    --text-gradient: linear-gradient(45deg, #eaaf42 0%, #f3c267 100%);
   }
 }
 
@@ -83,7 +83,6 @@ a img:hover {
 }
 
 header {
-  --text: 245, 245, 245;
   background: var(--bg);
   display: flex;
   align-items: center;
@@ -292,7 +291,7 @@ section {
   border-radius: 0.5rem;
   object-fit: cover;
   border: 1px solid var(--card-border);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -351,7 +350,6 @@ section {
 
 
 footer {
-  --text: 245, 245, 245;
   margin-top: 4rem;
   padding: 2rem 1rem;
   font-size: 0.875rem;
