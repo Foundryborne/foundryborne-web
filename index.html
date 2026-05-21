@@ -5,7 +5,7 @@ title: Foundryborne - Daggerheart FoundryVTT System
 <section class="description">
   <h1>This is <span class="special">Daggerheart</span> for Foundry.</h1>
   <p>
-    Welcome to the unofficial, community made
+    Welcome to the unofficial community made
     <strong>Daggerheart</strong> system for <strong>FoundryVTT</strong>.<br />This system is designed to capture
     the full flavor of the 2d12 Hope & Fear dice mechanics, character builds, and collaborative storytelling
     magic.
@@ -25,12 +25,12 @@ title: Foundryborne - Daggerheart FoundryVTT System
   <h2>Latest News</h2>
   <div class="news-compact-list">
     {% for post in site.posts limit:3 %}
-      <div class="news-compact-item">
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <span class="news-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-      </div>
+    <div class="news-compact-item">
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <span class="news-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+    </div>
     {% else %}
-      <p>No news posts available.</p>
+    <p>No news posts available.</p>
     {% endfor %}
   </div>
   <div style="text-align: center; margin-top: 1.5rem;">
