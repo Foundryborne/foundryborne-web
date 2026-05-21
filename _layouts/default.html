@@ -97,19 +97,53 @@
             if (!gallery) return;
             
             let autoScrollInterval;
+            let isAnimating = false;
+            
+            const animateScroll = (element, change, duration) => {
+                if (isAnimating) return;
+                isAnimating = true;
+                
+                // Disable snapping during animation to prevent jitter
+                element.style.scrollSnapType = 'none';
+                
+                const start = element.scrollLeft;
+                const startTime = performance.now();
+                
+                const animate = (currentTime) => {
+                    const timeElapsed = currentTime - startTime;
+                    let progress = timeElapsed / duration;
+                    if (progress > 1) progress = 1;
+                    
+                    // Cubic ease-in-out
+                    const ease = progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+                    
+                    element.scrollLeft = start + (change * ease);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    } else {
+                        // Re-enable snapping after a small delay to ensure the scroll finished settling
+                        setTimeout(() => {
+                            element.style.scrollSnapType = 'x mandatory';
+                            isAnimating = false;
+                        }, 50);
+                    }
+                };
+                requestAnimationFrame(animate);
+            };
             
             const startScroll = () => {
                 autoScrollInterval = setInterval(() => {
-                    // Check if reached the end (with a small 10px buffer)
                     if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
-                        gallery.scrollTo({ left: 0, behavior: 'smooth' });
+                        // Scroll back to start over 1.2 seconds
+                        animateScroll(gallery, -gallery.scrollLeft, 1200);
                     } else {
-                        // Scroll by the width of one image plus the gap (1rem = 16px)
+                        // Scroll next over 1.2 seconds
                         const firstImg = gallery.querySelector('img');
                         const scrollStep = firstImg ? firstImg.clientWidth + 16 : 300;
-                        gallery.scrollBy({ left: scrollStep, behavior: 'smooth' });
+                        animateScroll(gallery, scrollStep, 1200);
                     }
-                }, 3000);
+                }, 6000); // 6 seconds between scrolls
             };
 
             const stopScroll = () => {
