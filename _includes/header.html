@@ -60,9 +60,11 @@
             }
         }
 
+        // Run immediately to set initial state before first paint
+        updateHeaderClass();
+
         window.addEventListener("load", function () {
             var header = document.getElementById("header");
-            updateHeaderClass();
             setTimeout(function () {
                 header.classList.remove("notransition");
             }, 50);
