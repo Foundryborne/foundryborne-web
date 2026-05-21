@@ -18,32 +18,39 @@ title: Foundryborne - Daggerheart FoundryVTT System
     extensive automation tools.
   </p>
   <p>
-    <a href="features" class="button">View All Features</a>
+    <a href="features.html" class="button">View All Features</a>
   </p>
 </section>
-<section id="video-embed">
-  <div class="video-container"
-    style="max-width: 800px; margin-left: auto; margin-right: auto; aspect-ratio: 16/9; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden;">
-    <iframe style="width: 100%; height: 100%; border: none;"
-      src="https://www.youtube.com/embed/9t9dCQG_J-E?si=v60eY4-gEZbP8E8I" title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<section id="news" class="news-section">
+  <h2>Latest News</h2>
+  <div class="news-compact-list">
+    {% for post in site.posts limit:3 %}
+      <div class="news-compact-item">
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <span class="news-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+      </div>
+    {% else %}
+      <p>No news posts available.</p>
+    {% endfor %}
+  </div>
+  <div style="text-align: center; margin-top: 1.5rem;">
+    <a href="news.html" class="button special" style="font-size: 1.1rem; padding: 0.6rem 1.5rem;">All News</a>
   </div>
 </section>
 <section id="screenshots">
   <h2>Screenshot Gallery</h2>
   <div class="gallery">
-    <img src="assets/screenshots/main/character_creation.png" alt="Character Creation" title="Character Creation"
+    <img src="/assets/screenshots/main/character_creation.png" alt="Character Creation" title="Character Creation"
       onclick="openLightbox(this)" />
-    <img src="assets/screenshots/main/character_roll_bars.png" alt="Character Roll (Bars View)"
+    <img src="/assets/screenshots/main/character_roll_bars.png" alt="Character Roll (Bars View)"
       title="Character Roll (Bars View)" onclick="openLightbox(this)" />
-    <img src="assets/screenshots/main/character_roll_pips.png" alt="Character Roll (Pips View)"
+    <img src="/assets/screenshots/main/character_roll_pips.png" alt="Character Roll (Pips View)"
       title="Character Roll (Pips View)" onclick="openLightbox(this)" />
-    <img src="assets/screenshots/main/journal_compendium-browser.png" alt="SRD Journal and Compendium Browser"
+    <img src="/assets/screenshots/main/journal_compendium-browser.png" alt="SRD Journal and Compendium Browser"
       title="SRD Journal and Compendium Browser" onclick="openLightbox(this)" />
-    <img src="assets/screenshots/main/party-sheet_group-roll.png" alt="Party Sheet and Group Roll"
+    <img src="/assets/screenshots/main/party-sheet_group-roll.png" alt="Party Sheet and Group Roll"
       title="Party Sheet and Group Roll" onclick="openLightbox(this)" />
-    <img src="assets/screenshots/main/sheet-domain_card-attack_roll.png" alt="Domain Card and Attack Roll"
+    <img src="/assets/screenshots/main/sheet-domain_card-attack_roll.png" alt="Domain Card and Attack Roll"
       title="Domain Card and Attack Roll" onclick="openLightbox(this)" />
   </div>
   <!-- Lightbox overlay -->
@@ -53,5 +60,14 @@ title: Foundryborne - Daggerheart FoundryVTT System
     <div id="lightbox-caption"
       style="color: #fff; margin-top: 1rem; font-size: 1.25rem; text-align: center; max-width: 90%;"></div>
     <button class="lightbox-next" onclick="nextImage(event)">&#9654;</button>
+  </div>
+</section>
+<section id="video-embed">
+  <div class="video-container"
+    style="max-width: 800px; margin-left: auto; margin-right: auto; aspect-ratio: 16/9; box-shadow: 0 4px 20px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden; border: 1px solid var(--card-border);">
+    <iframe style="width: 100%; height: 100%; border: none;"
+      src="https://www.youtube.com/embed/9t9dCQG_J-E?si=v60eY4-gEZbP8E8I" title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   </div>
 </section>

@@ -1,7 +1,7 @@
 <header id="header" class="notransition">
     <a href="/">
         <div class="branding">
-            <img src="assets/foundryborne.png" alt="Daggerheart System Logo" />
+            <img src="/assets/foundryborne.png" alt="Daggerheart System Logo" />
             <h1>
                 Foundryborne<br />
                 <span>a Daggerheart System for FoundryVTT</span>
@@ -9,12 +9,12 @@
         </div>
     </a>
     <nav>
-        <a href="index.html" class="{% if page.url == '/' or page.url == '/' %}active{% endif %}">Home</a>
-        <a href="features.html" class="{% if page.url == '/features' %}active{% endif %}">Features</a>
-        <a href="changelog.html" class="{% if page.url == '/changelog' %}active{% endif %}">Changelog</a>
-        <a href="faq.html" class="{% if page.url == '/faq.html' %}active{% endif %}">FAQ</a>
-        <a href="team.html" class="{% if page.url == '/team.html' %}active{% endif %}">Team</a>
-        <a href="contact.html" class="{% if page.url == '/contact.html' %}active{% endif %}">Contact</a>
+        <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
+        <a href="/features.html" class="{% if page.url == '/features' or page.url == '/features.html' %}active{% endif %}">Features</a>
+        <a href="/changelog.html" class="{% if page.url == '/changelog' or page.url == '/changelog.html' %}active{% endif %}">Changelog</a>
+        <a href="/faq.html" class="{% if page.url == '/faq.html' %}active{% endif %}">FAQ</a>
+        <a href="/team.html" class="{% if page.url == '/team.html' %}active{% endif %}">Team</a>
+        <a href="/contact.html" class="{% if page.url == '/contact.html' %}active{% endif %}">Contact</a>
         <a href="https://github.com/Foundryborne/daggerheart/wiki" target="_blank">Documentation <svg
                 class="external-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

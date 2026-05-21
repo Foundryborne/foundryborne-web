@@ -1,0 +1,24 @@
+---
+layout: default
+title: All News
+---
+
+<section class="news-page-container">
+  <h1>All News</h1>
+  <p>Stay up to date with the latest from the Foundryborne project.</p>
+  
+  <div class="news-grid">
+    {% for post in site.posts %}
+      <article class="news-card">
+        <div class="news-content">
+          <p class="news-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          <a href="{{ post.url }}" class="button read-more">Read More</a>
+        </div>
+      </article>
+    {% else %}
+      <p>No news posts found.</p>
+    {% endfor %}
+  </div>
+</section>
