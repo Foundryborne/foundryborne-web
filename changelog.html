@@ -12,7 +12,7 @@ title: Release Notes - Foundryborne
     </p>
     <div class="release-log">
         <details id="v2.2.0" open>
-            <summary><strong>v2.2.5</strong> <a href="#v2.2.0" onclick="event.stopPropagation()"
+            <summary><strong>v2.2.6</strong> <a href="#v2.2.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -224,6 +224,47 @@ title: Release Notes - Foundryborne
                 </li>
                 <li>
                     Resolved an issue where the Compendium Browser could end up behind other dialogs when it was opened.
+                </li>
+            </ul>
+            <h3 id="v2.2.6">Version 2.2.6 <a href="#v2.2.6" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    When a character has a multiclass we now show the the multiclass and multiclass-subclass features in their own separate sections.
+                </li>
+                <li>
+                    Environments in the Compendium Browser now show Tier and Type info and have filters.
+                </li>
+                <li>
+                    Visual improvements to setting dialogs as well as various other minor UI improvements.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where you couldn't finish the levelup process with a multiclass selection. If you have a character sheet with a multiclass lacking a subclass because of this you can right-click the multiclass text in the sheet and there's a delete option to make it right again.
+                </li>
+                <li>
+                    Resolved an issue where a domain card couldn't be created in the Character Sheet.
+                </li>
+                <li>
+                    Resolved an issue where reaction roll chat messages showed With Hope/With Fear labels which wasn't intentional.
+                </li>
+                <li>
+                    Resolved an issue where the clowncar functionality of a party token and ranger with companion would fail when used repeatedly.
+                </li>
+                <li>
+                    Resolved an issue where the reduced max hope from scars was compared against the current scars in Avoid Death to check if a character's journey ended on the death move.
+                </li>
+                <li>
+                    Resolved an issue where excluding individual compendium packs in the Compendium Browser settings refused to save.
+                </li>
+                <li>
+                    Resolved an issue where subclasses with bad data could prevent subclasses from being shown in the Compendium Browser.
+                </li>
+                <li>
+                    Resolved an issue where the TokenHUD tooltips for canvas tokens had become bad translations.
                 </li>
             </ul>
         </details>
