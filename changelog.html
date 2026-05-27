@@ -12,7 +12,7 @@ title: Release Notes - Foundryborne
     </p>
     <div class="release-log">
         <details id="v2.2.0" open>
-            <summary><strong>v2.2.6</strong> <a href="#v2.2.0" onclick="event.stopPropagation()"
+            <summary><strong>v2.2.7</strong> <a href="#v2.2.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -265,6 +265,44 @@ title: Release Notes - Foundryborne
                 </li>
                 <li>
                     Resolved an issue where the TokenHUD tooltips for canvas tokens had become bad translations.
+                </li>
+            </ul>
+            <h3 id="v2.2.7">Version 2.2.7 <a href="#v2.2.7" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Improvements to the headers of various Item sheets, giving the names better readability.
+                </li>
+                <li>
+                    The Actor Size Categories (Large, Medium...) now also set the depth of the token, the z-axis, as that is more relevant now with levels.
+                </li>
+                <li>
+                    V14 Foundry added a "Lock Token" option to the TokenHUD that we brought in now as well.
+                </li>
+                <li>
+                    Clicking an Adversary or Environment in the Compendium Browser will now open its sheet.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where the option to set Quantity as the Cost for an Action belonging to an Item was missing.
+                </li>
+                <li>
+                    Resolved an issue where Homebrew Item Features couldn't set the ActiveEffect option Transfer to Actor.
+                </li>
+                <li>
+                    Resolved an issue where Adversaries and Environments were showing edit/delete buttons for features outside of edit mode.
+                </li>
+                <li>
+                    Resolved an issue where various disabled states on sheets in locked compendiums were missing.
+                </li>
+                <li>
+                    Resolved an issue where setting light-mode specifically on the Character Sheet wasn't respected.
+                </li>
+                <li>
+                    Resolved an issue where translations in the CombatTracker were incorrect.
                 </li>
             </ul>
         </details>
