@@ -5,13 +5,93 @@ title: Release Notes - Foundryborne
 <section id="release-notes">
 
     <h2>Release Notes</h2>
-    <!-- Keep Known Issues on top -->
     <p>
         <a href="https://github.com/Foundryborne/daggerheart/wiki/Known-Issues-and-Workarounds">Known
             Issues <sub>[Wiki]</sub></a>
     </p>
     <div class="release-log">
-        <details id="v2.3.0" open>
+        <details id="v2.4.0" open>
+            <summary><strong>v2.4.1</strong> <a href="#v2.4.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 2.4.0 for the
+                Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    The Countdown UI now lets you toggle the visibility of Short and Longterm countdowns.
+                </li>
+                <li>
+                    Loadout cards can now be drag/drop sorted.
+                </li>
+                <li>
+                    Features in the edit mode of sheets are categorised within their type (Passive|Action|Reaction).
+                </li>
+                <li>
+                    Features in the edit mode of sheets can be drag/drop resorted within their type and their
+                    descriptions can be expanded.
+                </li>
+                <li>
+                    Adversary/Environment sheets show the Notes and Potential Adversary tabs as faded out when they're
+                    empty.
+                </li>
+                <li>
+                    Powered up the Pause Icon even more.
+                </li>
+                <li>
+                    Added so that a Weapon can have an ActiveEffect giving a bonus to spellcast rolls while it's
+                    equipped.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where Uses for actions were not being spent when the action was used.
+                </li>
+                <li>
+                    Resolved an issue where having turned off Hope/Fear automation had no effect on Group Rolls and Tag
+                    Team Rolls.
+                </li>
+                <li>
+                    Resolved an issue where old v13 armors in v14 worlds could corrupt character data while active
+                    without any errors thrown.
+                </li>
+                <li>
+                    Resolved an issue where drag sorting adversary/environment features could lead to strange
+                    positioning.
+                </li>
+                <li>
+                    Resolved an issue where Countdowns with automated progression on Fear didn't step back the
+                    progression if the roll with fear was rerolled into something else.
+                </li>
+                <li>
+                    Resolved an issue where the default system token images would have the wrong size on Firefox.
+                </li>
+            </ul>
+            <h3 id="v2.4.1">Version 2.4.1 <a href="#v2.4.1" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Improved the informative tags on ActiveEffects in the Effects tab of sheets.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue with the Paired weapon feature showing a faulty formula (ITEM.2 appearing in
+                    damage formula).
+                </li>
+                <li>
+                    Resolved an issue where the -2BP option to add extra damage to adversaries would error when adding
+                    multiple new tokens to an ongoing combat.
+                </li>
+            </ul>
+        </details>
+        <details id="v2.3.0">
             <summary><strong>v2.3.4</strong> <a href="#v2.3.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
@@ -26,28 +106,35 @@ title: Release Notes - Foundryborne
                     Added a new NPC Actor type for handling more simple, narrative characters in play.
                 </li>
                 <li>
-                    Added Action Reroll and Damage Reroll to the right-click accessed context menu on chat messages to do full rerolls.
+                    Added Action Reroll and Damage Reroll to the right-click accessed context menu on chat messages to
+                    do full rerolls.
                 </li>
             </ul>
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where the TagTeamDialog could get stuck with an error making it unable to open if two damage rolls weren't dealing damage to the same resource. Any currently stuck dialogs should work now.
+                    Resolved an issue where the TagTeamDialog could get stuck with an error making it unable to open if
+                    two damage rolls weren't dealing damage to the same resource. Any currently stuck dialogs should
+                    work now.
                 </li>
                 <li>
-                    Resolved an issue with how damage results were displayed in the TagTeamDialog when the damage included no dice.
+                    Resolved an issue with how damage results were displayed in the TagTeamDialog when the damage
+                    included no dice.
                 </li>
                 <li>
-                    Resolved an issue where the descriptions of items in the CompendiumBrowser could sometimes fail to get loaded in.
+                    Resolved an issue where the descriptions of items in the CompendiumBrowser could sometimes fail to
+                    get loaded in.
                 </li>
                 <li>
                     Resolved an issue where players couldn't apply effects from chat messages if a GM wasn't online.
                 </li>
                 <li>
-                    Resolved an issue where Tier Adjustment on adversaries wasn't properly handling actions using standard attacks.
+                    Resolved an issue where Tier Adjustment on adversaries wasn't properly handling actions using
+                    standard attacks.
                 </li>
                 <li>
-                    Resolved an issue where Success/Failure visual for a chat message roll with a set difficulty was no longer being shown.
+                    Resolved an issue where Success/Failure visual for a chat message roll with a set difficulty was no
+                    longer being shown.
                 </li>
                 <li>
                     Resolved an issue where the Effects section of the Companion sheet was missing scrolling.
@@ -64,16 +151,20 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where the Combat Tracker sidebar tab could become inaccessible if a combatant had been created without an attached token.
+                    Resolved an issue where the Combat Tracker sidebar tab could become inaccessible if a combatant had
+                    been created without an attached token.
                 </li>
                 <li>
-                    Resolved an issue where the Statuses in the TokenHUD got arranged weirdly when only using the system defined ones.
+                    Resolved an issue where the Statuses in the TokenHUD got arranged weirdly when only using the system
+                    defined ones.
                 </li>
                 <li>
-                    Resolved an issue where clicking to apply effects in a chat message that has an attached Reaction Roll did not warn you if the targets hadn't made those rolls.
+                    Resolved an issue where clicking to apply effects in a chat message that has an attached Reaction
+                    Roll did not warn you if the targets hadn't made those rolls.
                 </li>
                 <li>
-                    Resolved an issue where a context menu wasn't available for Adversary Standard Attack, Character Unarmed Attack and Companion Attack.
+                    Resolved an issue where a context menu wasn't available for Adversary Standard Attack, Character
+                    Unarmed Attack and Companion Attack.
                 </li>
                 <li>
                     Resolved an issue where the Resource Management and Armor Management views had lost their colours.
@@ -87,13 +178,16 @@ title: Release Notes - Foundryborne
                     Resolved an issue where rerolling dice for duality rolls with automation on would fail.
                 </li>
                 <li>
-                    Resolved an issue where Ancestries and Communities sometimes wouldn't show their descriptions in the Compendium Browser.
+                    Resolved an issue where Ancestries and Communities sometimes wouldn't show their descriptions in the
+                    Compendium Browser.
                 </li>
                 <li>
-                    Resolved an issue where experiences that the player changed the label of could still be called by their old label in the levelup dialog.
+                    Resolved an issue where experiences that the player changed the label of could still be called by
+                    their old label in the levelup dialog.
                 </li>
                 <li>
-                    Resolved an issue where homebrew Downtime Moves/Weapon Features couldn't open the configuration sheet for their actions.
+                    Resolved an issue where homebrew Downtime Moves/Weapon Features couldn't open the configuration
+                    sheet for their actions.
                 </li>
                 <li>
                     Resolved an issue with the Countdown Icon-Only view always having a horizontal scrollbar visible.
@@ -119,7 +213,8 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where you couldn't select a subclass for a character using a class defined locally in the world and not in a compendium.
+                    Resolved an issue where you couldn't select a subclass for a character using a class defined locally
+                    in the world and not in a compendium.
                 </li>
                 <li>
                     Resolved an issue where players could access the Countdown Edit menu.
@@ -186,7 +281,8 @@ title: Release Notes - Foundryborne
                     assigned character present.
                 </li>
                 <li>
-                    Resolved an issue where the Character Creation layout for experiences with labels and separations was
+                    Resolved an issue where the Character Creation layout for experiences with labels and separations
+                    was
                     poorly organized.
                 </li>
                 <li>
@@ -221,7 +317,8 @@ title: Release Notes - Foundryborne
                     Updated all SRD entries that used @Template in the descriptions to instead use Action Areas.
                 </li>
                 <li>
-                    Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several entries
+                    Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several
+                    entries
                     (Battle Cry, Retract, Low Light Living).
                 </li>
             </ul>
@@ -239,7 +336,8 @@ title: Release Notes - Foundryborne
                     Resolved an issue where Companions were not receiving their initial 3 max stress on creation.
                 </li>
                 <li>
-                    Resolved an issue where ActiveEffects with an Origin value (such as a Guardian's Unstoppable feature)
+                    Resolved an issue where ActiveEffects with an Origin value (such as a Guardian's Unstoppable
+                    feature)
                     weren't working correctly.
                 </li>
                 <li>
@@ -271,10 +369,12 @@ title: Release Notes - Foundryborne
                     Resolved an issue where an effect applied from an actor that has been deleted could cause errors.
                 </li>
                 <li>
-                    Resolved an issue where modifiers in GroupRoll and TagTeamRoll dialogs would always be shown as positive.
+                    Resolved an issue where modifiers in GroupRoll and TagTeamRoll dialogs would always be shown as
+                    positive.
                 </li>
                 <li>
-                    Resolved an issue where the individual armor sources viewed in the character sheet did not have correct names.
+                    Resolved an issue where the individual armor sources viewed in the character sheet did not have
+                    correct names.
                 </li>
             </ul>
             <h4>Compendium Updates</h4>
@@ -297,19 +397,23 @@ title: Release Notes - Foundryborne
                     Resolved an issue where template areas in chat messages could not be placed by players.
                 </li>
                 <li>
-                    Resolved an issue where template areas in chat messages are placed in the specific level you are viewing, instead of being present in every level of the scene.
+                    Resolved an issue where template areas in chat messages are placed in the specific level you are
+                    viewing, instead of being present in every level of the scene.
                 </li>
                 <li>
-                    Resolved an issue where resources/uses of abilities were not reset to the right value on finishing downtime if the max was @cast.
+                    Resolved an issue where resources/uses of abilities were not reset to the right value on finishing
+                    downtime if the max was @cast.
                 </li>
                 <li>
-                    Resolved an issue where scene environments were not getting deleted from a scene when trying to do so.
+                    Resolved an issue where scene environments were not getting deleted from a scene when trying to do
+                    so.
                 </li>
                 <li>
                     Resolved an issue where manually editing a character's scars threw an error.
                 </li>
                 <li>
-                    Resolved an issue where dragging and dropping a feature from one adversary to another would create an unwanted extra duplicate feature.
+                    Resolved an issue where dragging and dropping a feature from one adversary to another would create
+                    an unwanted extra duplicate feature.
                 </li>
             </ul>
             <h3 id="v2.2.4">Version 2.2.4 <a href="#v2.2.4" onclick="event.stopPropagation()"
@@ -317,13 +421,17 @@ title: Release Notes - Foundryborne
             <h4>Features</h4>
             <ul>
                 <li>
-                    Reversed Subclass <--> Class linkage. The subclass now declares which class it belongs to, making it possible to add subclasses to the SRD Compendium Classes. This does not break any current subclasses or classes.
+                    Reversed Subclass <--> Class linkage. The subclass now declares which class it belongs to, making it
+                        possible to add subclasses to the SRD Compendium Classes. This does not break any current
+                        subclasses or classes.
                 </li>
                 <li>
-                    Improved the trait display in the Character Sheet aswell as various other smaller visual improvements.
+                    Improved the trait display in the Character Sheet aswell as various other smaller visual
+                    improvements.
                 </li>
                 <li>
-                    Added a system metagame setting for hiding the resources and information on characters in the Party Sheet.
+                    Added a system metagame setting for hiding the resources and information on characters in the Party
+                    Sheet.
                 </li>
             </ul>
             <h4>Bugfixes</h4>
@@ -355,7 +463,8 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where the canvas would become inoperable and require a reload after changing a character's max hit points.
+                    Resolved an issue where the canvas would become inoperable and require a reload after changing a
+                    character's max hit points.
                 </li>
                 <li>
                     Resolved an issue where the levelup process would crash on trying to multiclass.
@@ -369,7 +478,8 @@ title: Release Notes - Foundryborne
             <h4>Features</h4>
             <ul>
                 <li>
-                    When a character has a multiclass we now show the the multiclass and multiclass-subclass features in their own separate sections.
+                    When a character has a multiclass we now show the the multiclass and multiclass-subclass features in
+                    their own separate sections.
                 </li>
                 <li>
                     Environments in the Compendium Browser now show Tier and Type info and have filters.
@@ -381,25 +491,32 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where you couldn't finish the levelup process with a multiclass selection. If you have a character sheet with a multiclass lacking a subclass because of this you can right-click the multiclass text in the sheet and there's a delete option to make it right again.
+                    Resolved an issue where you couldn't finish the levelup process with a multiclass selection. If you
+                    have a character sheet with a multiclass lacking a subclass because of this you can right-click the
+                    multiclass text in the sheet and there's a delete option to make it right again.
                 </li>
                 <li>
                     Resolved an issue where a domain card couldn't be created in the Character Sheet.
                 </li>
                 <li>
-                    Resolved an issue where reaction roll chat messages showed With Hope/With Fear labels which wasn't intentional.
+                    Resolved an issue where reaction roll chat messages showed With Hope/With Fear labels which wasn't
+                    intentional.
                 </li>
                 <li>
-                    Resolved an issue where the clowncar functionality of a party token and ranger with companion would fail when used repeatedly.
+                    Resolved an issue where the clowncar functionality of a party token and ranger with companion would
+                    fail when used repeatedly.
                 </li>
                 <li>
-                    Resolved an issue where the reduced max hope from scars was compared against the current scars in Avoid Death to check if a character's journey ended on the death move.
+                    Resolved an issue where the reduced max hope from scars was compared against the current scars in
+                    Avoid Death to check if a character's journey ended on the death move.
                 </li>
                 <li>
-                    Resolved an issue where excluding individual compendium packs in the Compendium Browser settings refused to save.
+                    Resolved an issue where excluding individual compendium packs in the Compendium Browser settings
+                    refused to save.
                 </li>
                 <li>
-                    Resolved an issue where subclasses with bad data could prevent subclasses from being shown in the Compendium Browser.
+                    Resolved an issue where subclasses with bad data could prevent subclasses from being shown in the
+                    Compendium Browser.
                 </li>
                 <li>
                     Resolved an issue where the TokenHUD tooltips for canvas tokens had become bad translations.
@@ -413,7 +530,8 @@ title: Release Notes - Foundryborne
                     Improvements to the headers of various Item sheets, giving the names better readability.
                 </li>
                 <li>
-                    The Actor Size Categories (Large, Medium...) now also set the depth of the token, the z-axis, as that is more relevant now with levels.
+                    The Actor Size Categories (Large, Medium...) now also set the depth of the token, the z-axis, as
+                    that is more relevant now with levels.
                 </li>
                 <li>
                     V14 Foundry added a "Lock Token" option to the TokenHUD that we brought in now as well.
@@ -425,13 +543,16 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where the option to set Quantity as the Cost for an Action belonging to an Item was missing.
+                    Resolved an issue where the option to set Quantity as the Cost for an Action belonging to an Item
+                    was missing.
                 </li>
                 <li>
-                    Resolved an issue where Homebrew Item Features couldn't set the ActiveEffect option Transfer to Actor.
+                    Resolved an issue where Homebrew Item Features couldn't set the ActiveEffect option Transfer to
+                    Actor.
                 </li>
                 <li>
-                    Resolved an issue where Adversaries and Environments were showing edit/delete buttons for features outside of edit mode.
+                    Resolved an issue where Adversaries and Environments were showing edit/delete buttons for features
+                    outside of edit mode.
                 </li>
                 <li>
                     Resolved an issue where various disabled states on sheets in locked compendiums were missing.
@@ -883,7 +1004,8 @@ title: Release Notes - Foundryborne
                     assigned character present.
                 </li>
                 <li>
-                    Resolved an issue where the Character Creation layout for experiences with labels and separations was
+                    Resolved an issue where the Character Creation layout for experiences with labels and separations
+                    was
                     poorly organized.
                 </li>
                 <li>
@@ -901,7 +1023,8 @@ title: Release Notes - Foundryborne
             <h4>Compendium Updates</h4>
             <ul>
                 <li>
-                    Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several entries
+                    Resolved an issue where Advantage/Disadvantage sources were incorrectly configured on several
+                    entries
                     (Battle Cry, Retract, Low Light Living).
                 </li>
             </ul>
@@ -938,7 +1061,8 @@ title: Release Notes - Foundryborne
             <h4>Bugfixes</h4>
             <ul>
                 <li>
-                    Resolved an issue where resources/uses of abilities were not reset to the right value on finishing downtime if the max was @cast.
+                    Resolved an issue where resources/uses of abilities were not reset to the right value on finishing
+                    downtime if the max was @cast.
                 </li>
             </ul>
             <h3 id="v1.9.14">Version 1.9.14 <a href="#v1.9.14" onclick="event.stopPropagation()"
