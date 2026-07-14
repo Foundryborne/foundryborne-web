@@ -10,8 +10,139 @@ title: Release Notes - Foundryborne
             Issues <sub>[Wiki]</sub></a>
     </p>
     <div class="release-log">
-        <details id="v2.4.0" open>
-            <summary><strong>v2.4.1</strong> <a href="#v2.4.0" onclick="event.stopPropagation()"
+        <details id="v2.5.0" open>
+            <summary><strong>v2.5.4</strong> <a href="#v2.5.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 2.5.0 for the
+                Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Action Areas can now be set to be Attached To Token. They follow that token and can optionally apply effects within that area.
+                </li>
+                <li>
+                    Transform Actions can now be used to transform from and into Linked Actors which was previously prevented.
+                </li>
+                <li>
+                    Weapons can now have a resource. This means custom actions on them can spend this resource in the same way features do.
+                </li>
+                <li>
+                    (Improved styling) The fieldsets surrounding the Feature list in Adversary and Environment sheets have been removed and the scrollbars adjusted.
+                </li>
+                <li>
+                    (Improved styling) Improvements on the sidebar resource section.
+                </li>
+                <li>
+                    (Improved styling) In this and the last few versions Supe has been doing a huge job of various UI improvements that are too specific to easily mention. Huzzah!
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where expanded descriptions of items/features/etc in sheets would be closed when any editing was done.
+                </li>
+                <li>
+                    Resolved an issue where Summon Actions wouldn't always grab the correct in-world instance of the to-be-summoned actor.
+                </li>
+                <li>
+                    Resolved an issue where chat messages would show the Actor name in the header. Now it instead shows the Token name.
+                </li>
+                <li>
+                    Resolved an issue where the tier conversion of Adversaries wasn't grabbing the correct data. For example adversaries that were tiered down would end up wrong.
+                </li>
+                <li>
+                    Resolved an issue where the intended animation when an adversary uses a Transform action wasn't occurring anymore.
+                </li>
+            </ul>
+            <p>
+                <em>Heads up that it's very likely UI modules will require some changes to accommodate the changes done to the styling.</em>
+            </p>
+
+            <h3 id="v2.5.1">Version 2.5.1 <a href="#v2.5.1" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Armor items can now have a resource.
+                </li>
+                <li>
+                    Domain Cards can now be drag/dropped between the loadout and vault in the character sheet.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where GroupRoll/TagTeam and a few other things didn't have the correct accessibility when viewing the party sheet with observer permission.
+                </li>
+                <li>
+                    Resolved an issue where characters in beastform couldn't use their Beastform basic attack in TagTeam Rolls.
+                </li>
+                <li>
+                    Resolved an issue where a character with no armor available wouldn't get the benefits of any ReduceSeverity damage reduction rules.
+                </li>
+            </ul>
+            <h4>SRD Compendiums</h4>
+            <ul>
+                <li>
+                    Fixed the Towering Stalk domain card to have a single resource both actions consume.
+                </li>
+                <li>
+                    Corrected the description of the vicious maul action.
+                </li>
+            </ul>
+
+            <h3 id="v2.5.2">Version 2.5.2 <a href="#v2.5.2" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where ActiveEffects were being loaded in with Type custom which made them generally not apply correctly.
+                </li>
+                <li>
+                    Resolved an issue where enriched chat buttons to create areas were throwing errors.
+                </li>
+            </ul>
+
+            <h3 id="v2.5.3">Version 2.5.3 <a href="#v2.5.3" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Added improved system styling for Secret blocks from editors.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where the migration for v2.5.2 could error out when trying to update items not from the SRD.
+                </li>
+            </ul>
+
+            <h3 id="v2.5.4">Version 2.5.4 <a href="#v2.5.4" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where summon actions would error if trying to summon actors with wildcard paths for their images.
+                </li>
+                <li>
+                    Resolved an issue where the chat summary message of summon actions failed to list the number of tokens summoned.
+                </li>
+                <li>
+                    Resolved an issue where secret block styling became vertical in chat messages and the button wouldn't work.
+                </li>
+                <li>
+                    Resolved an issue where chat messages would lose their expanded/collapsed state for descriptions when rerendering.
+                </li>
+            </ul>
+        </details>
+
+        <details id="v2.4.0">
+            <summary><strong>v2.4.2</strong> <a href="#v2.4.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
             <p>
@@ -88,6 +219,14 @@ title: Release Notes - Foundryborne
                 <li>
                     Resolved an issue where the -2BP option to add extra damage to adversaries would error when adding
                     multiple new tokens to an ongoing combat.
+                </li>
+            </ul>
+            <h3 id="v2.4.2">Version 2.4.2 <a href="#v2.4.2" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></h3>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Fixed some issues with v13 -> v14 migration.
                 </li>
             </ul>
         </details>
