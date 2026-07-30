@@ -10,7 +10,82 @@ title: Release Notes - Foundryborne
             Issues <sub>[Wiki]</sub></a>
     </p>
     <div class="release-log">
-        <details id="v2.5.0" open>
+        <details id="v2.6.0" open>
+            <summary><strong>v2.6.0</strong> <a href="#v2.6.0" onclick="event.stopPropagation()"
+                    style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
+            <h2>Foundryborne Release Announcement</h2>
+            <p>
+                The <strong>Foundryborne</strong> team is proud to announce the release of version 2.6.0 for the
+                Foundryborne Daggerheart System.
+            </p>
+            <h3>Changelog</h3>
+            <h4>Features</h4>
+            <ul>
+                <li>
+                    Targeting rework. <a href="https://discord.com/channels/1374793429191491725/1385332460329373797/1531090870185496636" target="_blank" rel="noopener noreferrer">https://discord.com/channels/1374793429191491725/1385332460329373797/1531090870185496636</a>
+                </li>
+                <li>
+                    Fear tracker visual improvements. It can now be set to a static position in System Settings: Appearance Settings.
+                </li>
+                <li>
+                    Damage rework. This enables actions to handle marking hit points directly for cases such as <code>Mark 1 Hit Point</code>.
+                </li>
+                <li>
+                    Resistance &amp; Immunity visualisation in chat messages and damage summaries so it's clearly shown when an adversary is taking less damage.
+                </li>
+                <li>
+                    Reload handling. Weapons with the reloading trait now lets you easily manage the reload check roll either manually or automatically.
+                </li>
+                <li>
+                    Weapons can now edit the main attack action's properties. This lets it add something like a resource cost to attacks.
+                </li>
+                <li>
+                    ComboDice rolling. The system now recognises damage in the style of <code>2d4c</code> to roll for damage.
+                </li>
+                <li>
+                    Items set on the hotbar will now show their tooltips.
+                </li>
+                <li>
+                    You can now rightclick on a countdow in the Countdown UI to get the option to delete it.
+                </li>
+                <li>
+                    The <code>hpDamageMultiplier</code> active effect now properly changes the formula and shows the changed damage in chat messages instead of doing it invisibly.
+                </li>
+            </ul>
+            <h4>Bugfixes</h4>
+            <ul>
+                <li>
+                    Resolved an issue where rerolling a chat message that was a crit into a non-crit wouldn't change the damage and vice versa.
+                </li>
+                <li>
+                    Resolved an issue where Light-Mode had regresssed to a bad look for armor slots in the character sheet.
+                </li>
+                <li>
+                    Resolved an issue where the Appearance Setting for auto expanding chat message sections had stopped working.
+                </li>
+                <li>
+                    Resolved an issue where long timestamps in chat messages would make the header text wrap in a bad way.
+                </li>
+                <li>
+                    Resolved an issue where the optional combat sounds during an encounter would play the 'You're next' sound when removing the spotlight from a token.
+                </li>
+            </ul>
+            <h4>SRD Compendium</h4>
+            <ul>
+                <li>
+                    Updates to things that should use the new <code>Mark Hit Points</code> capability.
+                    <ul>
+                        <li>Devastating Strike - Beastform</li>
+                        <li>Valor - Battle Monster</li>
+                        <li>Valor - Champion's Edge</li>
+                        <li>Valor - Onslaught</li>
+                        <li>Valor - Reaper's Strike</li>
+                    </ul>
+                </li>
+            </ul>
+        </details>
+
+        <details id="v2.5.0">
             <summary><strong>v2.5.4</strong> <a href="#v2.5.0" onclick="event.stopPropagation()"
                     style="text-decoration:none; opacity:0.5; margin-left:5px;">#</a></summary>
             <h2>Foundryborne Release Announcement</h2>
