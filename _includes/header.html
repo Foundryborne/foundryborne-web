@@ -1,78 +1,49 @@
-<header id="header" class="notransition">
-    <a href="/">
-        <div class="branding">
-            <img src="/assets/foundryborne.png" alt="Daggerheart System Logo" />
-            <h1>
-                Foundryborne<br />
-                <span>Daggerheart for FoundryVTT</span>
-            </h1>
-        </div>
+<header class="site-header">
+  <div class="container header-container">
+    <a href="{{ site.baseurl }}/" class="brand">
+      <img src="{{ site.baseurl }}/assets/foundryborne.png" alt="Foundryborne Logo" class="brand-logo">
+      <span class="brand-title">Foundryborne</span>
     </a>
-    <nav>
-        <a href="/" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
-        <a href="/features"
-            class="{% if page.url contains '/features' %}active{% endif %}">Features</a>
-        <a href="/changelog"
-            class="{% if page.url contains '/changelog' %}active{% endif %}">Changelog</a>
-        <a href="/faq" class="{% if page.url contains '/faq' %}active{% endif %}">FAQ</a>
-        <a href="/team" class="{% if page.url contains '/team' %}active{% endif %}">Team</a>
-        <a href="/contact" class="{% if page.url contains '/contact' %}active{% endif %}">Contact</a>
-        <a href="https://github.com/Foundryborne/daggerheart/wiki" target="_blank">Documentation <svg
-                class="external-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg></a>
-        <a href="https://discord.gg/HnUt2AtwbD" target="_blank">Discord <svg class="external-icon"
-                xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg></a>
-        <a href="https://github.com/Foundryborne/daggerheart" target="_blank">GitHub <svg class="external-icon"
-                xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg></a>
-        <a href="https://www.youtube.com/@foundryborne" target="_blank">YouTube <svg class="external-icon"
-                xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg></a>
-        <a href="https://foundryvtt.com/packages/daggerheart" class="special" target="_blank">Install</a>
+
+    <nav class="nav-wrapper">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="{{ site.baseurl }}/"
+            class="nav-link {% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a></li>
+        <li><a href="{{ site.baseurl }}/features.html"
+            class="nav-link {% if page.url contains 'features' %}active{% endif %}">Features</a></li>
+        <li><a href="{{ site.baseurl }}/content.html"
+            class="nav-link {% if page.url contains 'content' %}active{% endif %}">Premium Content</a></li>
+        <li><a href="{{ site.baseurl }}/faq.html"
+            class="nav-link {% if page.url contains 'faq' %}active{% endif %}">FAQ</a></li>
+        <li><a href="{{ site.baseurl }}/team.html"
+            class="nav-link {% if page.url contains 'team' %}active{% endif %}">Team</a></li>
+        <li><a href="{{ site.docs_url }}" target="_blank" rel="noopener" class="nav-link">Docs <i
+              class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i></a></li>
+      </ul>
     </nav>
-    <script type="text/javascript">
-        function updateHeaderClass() {
-            var header = document.getElementById("header");
 
-            if (window.innerWidth > 1024) {
-                if (document.documentElement.scrollTop || document.body.scrollTop > window.innerHeight) {
-                    header.classList.remove("big");
-                } else {
-                    header.classList.add("big");
-                }
-            } else {
-                header.classList.remove("big");
-            }
-        }
+    <div class="header-actions">
+      <a href="{{ site.discord_url }}" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"
+        title="Join Discord">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+      <a href="{{ site.github_repo }}" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"
+        title="GitHub Repository">
+        <i class="fa-brands fa-github"></i>
+      </a>
 
-        // Run immediately to set initial state before first paint
-        updateHeaderClass();
+      <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme">
+        <i id="theme-icon" class="fa-solid fa-moon"></i>
+      </button>
 
-        window.addEventListener("load", function () {
-            var header = document.getElementById("header");
-            setTimeout(function () {
-                header.classList.remove("notransition");
-            }, 50);
-        });
+      <a href="https://foundryvtt.com/packages/daggerheart" target="_blank" rel="noopener"
+        class="btn btn-install btn-sm">
+        <i class="fa-solid fa-download"></i> Install System
+      </a>
 
-        window.addEventListener("resize", updateHeaderClass);
-        window.addEventListener("scroll", updateHeaderClass);
-    </script>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
 </header>

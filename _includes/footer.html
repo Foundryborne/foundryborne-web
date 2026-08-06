@@ -1,13 +1,19 @@
-<footer>
-    <div class="footer-content">
-        <img src="/assets/DH_CGL_logos_final_white_full_color.png" alt="Daggerheart compatible" height="75" />
-        <p>
-            This product includes materials from the Daggerheart System Reference Document 1.0, © Critical Role, LLC.
-            under the terms of the Darrington Press Community Gaming (DPCGL) License.<br />More information can be found
-            at
-            <a href="https://www.daggerheart.com" target="_blank" rel="noopener noreferrer">www.daggerheart.com</a>.
-            There
-            are no previous modifications by others.
-        </p>
+<footer class="site-footer" style="text-align: center;">
+  <div class="container">
+    <div
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.2rem; margin-bottom: 2rem;">
+      <img src="{{ site.baseurl }}/assets/dh-logo.webp" alt="Daggerheart System Logo" class="footer-brand-logo"
+        style="height: 60px; width: auto; margin: 0 auto;">
+      <p style="max-width: 650px; margin: 0 auto; color: var(--text-muted); font-size: 0.95rem;">
+        Darrington Press™, Daggerheart™, and their respective logos are trademarks of Critical Role, LLC and used with
+        permission.
+      </p>
     </div>
+
+
+    <div class="footer-bottom" style="justify-content: center; text-align: center;">
+      <p>&copy; {{ 'now' | date: "%Y" }} Foundryborne Team.
+        Foundryborne is an independent community project.</p>
+    </div>
+  </div>
 </footer>

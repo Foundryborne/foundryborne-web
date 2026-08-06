@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="page-header" style="background: var(--hero-gradient); padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border-color); text-align: center;">
+  <div class="container" style="max-width: 1400px;">
+    <h1 style="font-size: clamp(1.8rem, 3.8vw, 3rem); white-space: nowrap;">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="hero-description" style="margin: 0.5rem auto 0; max-width: 1000px;">{{ page.subtitle }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<div class="page-body" style="padding: 3rem 0;">
+  <div class="container" style="max-width: 1400px;">
+    {{ content }}
+  </div>
+</div>

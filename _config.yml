@@ -1,12 +1,22 @@
-title: Foundryborne
-description: The unofficial Daggerheart system for FoundryVTT.
-url: "https://foundryborne.github.io" # Replace with actual URL if different
-theme: jekyll-theme-cayman
-permalink: pretty
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+title: "Foundryborne | Daggerheart System & Premium Content"
+email: contact@foundryborne.org
+description: "Official community implementation of the Daggerheart RPG system and premium content modules for Foundry VTT."
+baseurl: "" # set if deploying to a subpath like /web2
+url: "https://foundryborne.github.io"
+
+# Social & Repository Links
+github_username: Foundryborne
+github_repo: "https://github.com/Foundryborne/daggerheart"
+docs_url: "https://github.com/Foundryborne/daggerheart/wiki"
+discord_url: "https://discord.gg/HnUt2AtwbD"
+manifest_url: "https://github.com/Foundryborne/daggerheart/releases/latest/download/system.json"
+foundry_package_url: "https://foundryvtt.com/packages/daggerheart"
+
+# Build settings
+markdown: kramdown
+theme: null
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

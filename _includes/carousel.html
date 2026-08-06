@@ -1,0 +1,16 @@
+{% assign all_screenshots = site.static_files | where_exp: "item", "item.path contains '/assets/screenshots/'" %}
+
+<div class="carousel-container">
+  <div class="carousel-slides" id="carousel-slides">
+    {% for screenshot in all_screenshots %}
+      <div class="carousel-slide" data-lightbox="{{ screenshot.path | relative_url }}">
+        <img src="{{ screenshot.path | relative_url }}" alt="Screenshot {{ forloop.index }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="carousel-nav-btn carousel-prev" id="carousel-prev" aria-label="Previous Slide"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="carousel-nav-btn carousel-next" id="carousel-next" aria-label="Next Slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+  <div class="carousel-dots" id="carousel-dots"></div>
+</div>

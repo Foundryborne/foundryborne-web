@@ -1,178 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description"
-        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:description"
-        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{{ site.url }}/assets/foundryborne.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/foundryborne.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="twitter:description"
-        content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="twitter:image" content="{{ site.url }}/assets/foundryborne.png">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="/assets/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cinzel+Decorative:wght@400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="icon" type="image/png" href="/assets/foundryborne.png" />
-    <script>
-        function openLightbox(imgElement) {
-            const lightbox = document.getElementById("lightbox");
-            const lightboxImg = document.getElementById("lightbox-img");
-            const lightboxCaption = document.getElementById("lightbox-caption");
-            // Gather all gallery images
-            lightboxImages = Array.from(document.querySelectorAll('.gallery img')).map(img => ({
-                src: img.src,
-                title: img.title
-            }));
-            currentIndex = lightboxImages.findIndex(img => img.src === imgElement.src);
-            lightboxImg.src = imgElement.src;
-            if (lightboxCaption) {
-                lightboxCaption.textContent = imgElement.title;
-            }
-            lightbox.style.display = "flex";
-        }
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 
-        function closeLightbox() {
-            const lightbox = document.getElementById("lightbox");
-            lightbox.style.display = "none";
-        }
+  <!-- Early Theme Detection to avoid FOUC -->
+  <script>
+    (function() {
+      const storedTheme = localStorage.getItem('foundryborne_theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = storedTheme ? storedTheme : (systemPrefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 
-        let lightboxImages = [];
-        let currentIndex = 0;
-
-        function prevImage(event) {
-            event.stopPropagation();
-            if (lightboxImages.length === 0) return;
-            currentIndex = (currentIndex - 1 + lightboxImages.length) % lightboxImages.length;
-            document.getElementById("lightbox-img").src = lightboxImages[currentIndex].src;
-            const caption = document.getElementById("lightbox-caption");
-            if (caption) caption.textContent = lightboxImages[currentIndex].title;
-        }
-
-        function nextImage(event) {
-            event.stopPropagation();
-            if (lightboxImages.length === 0) return;
-            currentIndex = (currentIndex + 1) % lightboxImages.length;
-            document.getElementById("lightbox-img").src = lightboxImages[currentIndex].src;
-            const caption = document.getElementById("lightbox-caption");
-            if (caption) caption.textContent = lightboxImages[currentIndex].title;
-        }
-
-        // Back to Top Button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            var mybutton = document.getElementById("backToTopBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
-        // Auto-rotate gallery
-        document.addEventListener('DOMContentLoaded', () => {
-            const gallery = document.querySelector('.gallery');
-            if (!gallery) return;
-            
-            let autoScrollInterval;
-            let isAnimating = false;
-            
-            const animateScroll = (element, change, duration) => {
-                if (isAnimating) return;
-                isAnimating = true;
-                
-                // Disable snapping during animation to prevent jitter
-                element.style.scrollSnapType = 'none';
-                
-                const start = element.scrollLeft;
-                const startTime = performance.now();
-                
-                const animate = (currentTime) => {
-                    const timeElapsed = currentTime - startTime;
-                    let progress = timeElapsed / duration;
-                    if (progress > 1) progress = 1;
-                    
-                    // Cubic ease-in-out
-                    const ease = progress < 0.5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-                    
-                    element.scrollLeft = start + (change * ease);
-                    
-                    if (progress < 1) {
-                        requestAnimationFrame(animate);
-                    } else {
-                        // Re-enable snapping after a small delay to ensure the scroll finished settling
-                        setTimeout(() => {
-                            element.style.scrollSnapType = 'x mandatory';
-                            isAnimating = false;
-                        }, 50);
-                    }
-                };
-                requestAnimationFrame(animate);
-            };
-            
-            const startScroll = () => {
-                autoScrollInterval = setInterval(() => {
-                    if (gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 10) {
-                        // Scroll back to start over 1.2 seconds
-                        animateScroll(gallery, -gallery.scrollLeft, 1200);
-                    } else {
-                        // Scroll next over 1.2 seconds
-                        const firstImg = gallery.querySelector('img');
-                        const scrollStep = firstImg ? firstImg.clientWidth + 16 : 300;
-                        animateScroll(gallery, scrollStep, 1200);
-                    }
-                }, 6000); // 6 seconds between scrolls
-            };
-
-            const stopScroll = () => {
-                clearInterval(autoScrollInterval);
-            };
-
-            startScroll();
-            
-            // Pause on hover or touch
-            gallery.addEventListener('mouseenter', stopScroll);
-            gallery.addEventListener('mouseleave', startScroll);
-            gallery.addEventListener('touchstart', stopScroll, {passive: true});
-            gallery.addEventListener('touchend', startScroll, {passive: true});
-        });
-    </script>
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/foundryborne.png">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
-
 <body>
-    {% include header.html %}
-    <main class="content">
-        <!--<div class="notice-banner">
-            🚨 <strong>Version 2.0 is now out!</strong> Our new release for Foundry V14 is available. Version 1.x will only receive important bugfixes from now on.
-        </div>-->
-        <div class="container">
-            {{ content }}
-        </div>
-    </main>
-    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑</button>
-    {% include footer.html %}
-</body>
 
+  <!-- Persistent Sticky Header -->
+  {% include header.html %}
+
+  <!-- Main Content Wrapper -->
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- Global Footer -->
+  {% include footer.html %}
+
+  <!-- Lightbox Image Modal -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+      <img src="" alt="Screenshot Full View" class="modal-img" id="modal-img">
+    </div>
+  </div>
+
+  <!-- Main JS Script -->
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+</body>
 </html>

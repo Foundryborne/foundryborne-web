@@ -1,231 +1,197 @@
 ---
-layout: default
-title: Team - Foundryborne
-description: Meet the developers and contributors behind the Foundryborne system.
+layout: page
+title: Meet the Foundryborne Team
+subtitle: The passionate developers, designers, and community creators building the Daggerheart VTT experience.
 ---
 
-<section class="team-header">
-    <h1>Our <span class="special">Team</span></h1>
-    <p>The contributors making Daggerheart on FoundryVTT possible.</p>
-</section>
+<!-- Active Team Members -->
+<div class="team-grid">
 
-<section class="team-grid">
-    {% assign team_members = "Lead Developer,Contributor,Contributor" | split: "," %}
+  <!-- Cosmo -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/cosmo.png" alt="Cosmo" class="team-avatar">
+    </div>
+    <h3 class="team-name">Cosmo</h3>
+    <div class="team-role">Founder, Infrastructure, Communication, Community Management </div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @cptn_cosmo
+    </div>
+  </div>
 
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/cosmo.png" alt="Cosmo" />
-        </div>
-        <div class="member-info">
-            <h2>Cosmo</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @cptn_cosmo
-                </span>
-            </div>
-            <p class="description">
-                Founder, Infrastructure, Communication, Community Management
-            </p>
-        </div>
+  <!-- Harry -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/harry.jpg" alt="Harry" class="team-avatar">
+    </div>
+    <h3 class="team-name">Harry</h3>
+    <div class="team-role">Founder, Lead Developer</div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @harryfuralle
+    </div>
+  </div>
+
+  <!-- Molilo -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/molilo.jpg" alt="Molilo" class="team-avatar">
+    </div>
+    <h3 class="team-name">Molilo</h3>
+    <div class="team-role">Founder, Lead Artist </div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @molilo
+    </div>
+  </div>
+
+  <!-- Supe -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/supe.jpg" alt="Supe" class="team-avatar">
+    </div>
+    <h3 class="team-name">Supe</h3>
+    <div class="team-role">Lead Developer </div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @supe
+    </div>
+  </div>
+
+  <!-- Ikraik -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/ikraik.jpg" alt="Ikraik" class="team-avatar">
+    </div>
+    <h3 class="team-name">Ikraik</h3>
+    <div class="team-role">Developer </div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @ikraik
+    </div>
+  </div>
+
+  <!-- Skarlso -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/skarlso.png" alt="Skarlso" class="team-avatar">
+    </div>
+    <h3 class="team-name">Skarlso</h3>
+    <div class="team-role">Developer </div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @skarlso
+    </div>
+  </div>
+
+  <!-- Irktheimp -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/irktheimp.jpg" alt="Irktheimp" class="team-avatar">
+    </div>
+    <h3 class="team-name">Irktheimp</h3>
+    <div class="team-role">Developer </div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @irktheimp
+    </div>
+  </div>
+
+  <!-- Psitacus -->
+  <div class="team-card">
+    <div class="team-avatar-wrap">
+      <img src="{{ site.baseurl }}/assets/team/psitacus.jpg" alt="Psitacus" class="team-avatar">
+    </div>
+    <h3 class="team-name">Psitacus</h3>
+    <div class="team-role">Developer</div>
+    <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+      <i class="fa-brands fa-discord"></i> @psitacus
+    </div>
+  </div>
+
+</div>
+
+<!-- Previous Contributors Section -->
+<div style="margin-top: 5rem; text-align: center;">
+  <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-bottom: 3rem;">
+    <div style="flex-grow: 1; height: 1px; background: var(--border-color);"></div>
+    <h2 style="font-size: 1.8rem; margin: 0; white-space: nowrap; color: var(--golden);">Previous Contributors</h2>
+    <div style="flex-grow: 1; height: 1px; background: var(--border-color);"></div>
+  </div>
+
+  <div class="team-grid">
+    <!-- Joaquinp98 -->
+    <div class="team-card">
+      <div class="team-avatar-wrap">
+        <img src="{{ site.baseurl }}/assets/team/joaquinp98.jpg" alt="Joaquinp98" class="team-avatar">
+      </div>
+      <h3 class="team-name">Joaquinp98</h3>
+      <div class="team-role"> er</div>
+      <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+        <i class="fa-brands fa-discord"></i> @joaquinp98
+      </div>
     </div>
 
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/harry.jpg" alt="Harry" />
-        </div>
-        <div class="member-info">
-            <h2>Harry</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @harryfuralle
-                </span>
-            </div>
-            <p class="description">
-                Founder, Lead Developer
-            </p>
-        </div>
+    <!-- Lazjen -->
+    <div class="team-card">
+      <div class="team-avatar-wrap">
+        <img src="{{ site.baseurl }}/assets/team/lazjen.jpg" alt="Lazjen" class="team-avatar">
+      </div>
+      <h3 class="team-name">Lazjen</h3>
+      <div class="team-role">Developer</div>
+      <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+        <i class="fa-brands fa-discord"></i> @lazjen
+      </div>
     </div>
 
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/molilo.jpg" alt="Molilo" />
-        </div>
-        <div class="member-info">
-            <h2>Molilo</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @molilo
-                </span>
-            </div>
-            <p class="description">
-                Founder, Lead Artist
-            </p>
-        </div>
+    <!-- dapoulp -->
+    <div class="team-card">
+      <div class="team-avatar-wrap"
+        style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-black) 100%);">
+        <i class="fa-solid fa-user-secret" style="font-size: 3rem; color: var(--golden);"></i>
+      </div>
+      <h3 class="team-name">dapoulp</h3>
+      <div class="team-role">Developer</div>
+      <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+        <i class="fa-brands fa-discord"></i> @dapoulp
+      </div>
     </div>
 
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/supe.jpg" alt="Supe" />
-        </div>
-        <div class="member-info">
-            <h2>Supe</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @supe
-                </span>
-            </div>
-            <p class="description">
-                Developer
-            </p>
-        </div>
+    <!-- UsernameIsInUse -->
+    <div class="team-card">
+      <div class="team-avatar-wrap"
+        style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-black) 100%);">
+        <i class="fa-solid fa-user-secret" style="font-size: 3rem; color: var(--golden);"></i>
+      </div>
+      <h3 class="team-name">UsernameIsInUse</h3>
+      <div class="team-role">Artist Foundryborne Logo</div>
+      <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+        <i class="fa-brands fa-discord"></i> @UsernameIsInUse
+      </div>
     </div>
 
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/ikraik.jpg" alt="Ikraik" />
-        </div>
-        <div class="member-info">
-            <h2>Ikraik</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @ikraik
-                </span>
-            </div>
-            <p class="description">
-                Developer
-            </p>
-        </div>
+    <!-- CyrensMaps -->
+    <div class="team-card">
+      <div class="team-avatar-wrap"
+        style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--dark-blue) 0%, var(--deep-black) 100%);">
+        <i class="fa-solid fa-user-secret" style="font-size: 3rem; color: var(--golden);"></i>
+      </div>
+      <h3 class="team-name">CyrensMaps</h3>
+      <div class="team-role">Artist (Combat Wheelchair Icons)</div>
+      <div style="color: var(--golden); font-family: monospace; font-size: 0.95rem; margin-top: 0.5rem;">
+        <i class="fa-brands fa-discord"></i> @CyrensMaps
+      </div>
     </div>
+  </div>
+</div>
 
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/lazjen.jpg" alt="Lazjen" />
-        </div>
-        <div class="member-info">
-            <h2>Lazjen</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @lazjen
-                </span>
-            </div>
-            <p class="description">
-                Developer
-            </p>
-        </div>
-    </div>
-
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/psitacus.jpg" alt="Psitacus" />
-        </div>
-        <div class="member-info">
-            <h2>Psitacus</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @psitacus
-                </span>
-            </div>
-            <p class="description">
-                Developer
-            </p>
-        </div>
-    </div>
-
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/irktheimp.jpg" alt="IrkTheImp" />
-        </div>
-        <div class="member-info">
-            <h2>IrkTheImp</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @irktheimp
-                </span>
-            </div>
-            <p class="description">
-                Developer
-            </p>
-        </div>
-    </div>
-
-    <div class="team-member">
-        <div class="portrait-container">
-            <img src="/assets/images/team/joaquinp98.jpg" alt="Joaquinp98" />
-        </div>
-        <div class="member-info">
-            <h2>Joaquinp98</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @joaquinp98
-                </span>
-            </div>
-            <p class="description">
-                Developer
-            </p>
-        </div>
-    </div>
-
-    <div class="team-member">
-        <div class="portrait-container default-avatar">
-            <i class="fa-solid fa-circle-user"></i>
-        </div>
-        <div class="member-info">
-            <h2>dapoulp</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @dapoulp
-                </span>
-            </div>
-            <p class="description">
-                Developer
-            </p>
-        </div>
-    </div>
-
-    <div class="team-member">
-        <div class="portrait-container default-avatar">
-            <i class="fa-solid fa-circle-user"></i>
-        </div>
-        <div class="member-info">
-            <h2>UsernameIsInUse</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @UsernameIsInUse
-                </span>
-            </div>
-            <p class="description">
-                Artist (Logo & Duality Dice Icon)
-            </p>
-        </div>
-    </div>
-
-    <div class="team-member">
-        <div class="portrait-container default-avatar">
-            <i class="fa-solid fa-circle-user"></i>
-        </div>
-        <div class="member-info">
-            <h2>CyrensMaps</h2>
-            <div class="usernames">
-                <span class="user-item">
-                    <i class="fa-brands fa-discord icon"></i>
-                    @CyrensMaps
-                </span>
-            </div>
-            <p class="description">
-                Artist (Combat Wheelchair Icons)
-            </p>
-        </div>
-    </div>
-
-</section>
+<!-- Join the Team Callout -->
+<div
+  style="text-align: center; margin-top: 4rem; padding: 3rem 2rem; background: var(--bg-card); border: 1px solid var(--border-highlight); border-radius: 16px;">
+  <h2>Want to contribute to Foundryborne?</h2>
+  <p style="color: var(--text-muted); max-width: 650px; margin: 0.8rem auto 1.8rem;">
+    Foundryborne is an open-source community project and we'd love to have you onboard!
+  </p>
+  <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+    <a href="{{ site.github_repo }}" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+      <i class="fa-brands fa-github"></i> GitHub Repository
+    </a>
+    <a href="{{ site.discord_url }}" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
+      <i class="fa-brands fa-discord"></i> Join Discord
+    </a>
+  </div>
+</div>
