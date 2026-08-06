@@ -20,3 +20,13 @@ Thumbs.db
 *.swo
 *~
 node_modules/
+
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler configuration and local dependencies
+.bundle/
+vendor/
