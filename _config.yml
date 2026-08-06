@@ -13,6 +13,7 @@ manifest_url: "https://github.com/Foundryborne/daggerheart/releases/latest/downl
 foundry_package_url: "https://foundryvtt.com/packages/daggerheart"
 
 # Build settings
+permalink: pretty
 markdown: kramdown
 theme: null
 
